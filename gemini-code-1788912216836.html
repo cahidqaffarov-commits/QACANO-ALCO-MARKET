@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçki və Qəlyanaltı Dükanı</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; padding-bottom: 80px; }
+        header { background: #1a252f; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; sticky: top; top: 0; z-index: 100; }
+        header h1 { font-size: 20px; }
+        .cart-btn { background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+        
+        .filters { padding: 15px; background: white; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .filter-group { margin-bottom: 10px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 5px; }
+        .filter-btn { background: #eef2f5; border: 1px solid #ddd; padding: 6px 14px; border-radius: 15px; cursor: pointer; white-space: nowrap; font-size: 14px; }
+        .filter-btn.active { background: #2c3e50; color: white; border-color: #2c3e50; }
+
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; padding: 0 15px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; }
+        .product-img { width: 100%; height: 130px; object-fit: cover; background: #eee; }
+        .product-info { padding: 10px; }
+        .product-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+        .product-meta { font-size: 12px; color: #777; margin-bottom: 8px; }
+        .product-price { font-size: 16px; color: #27ae60; font-weight: bold; }
+        .add-btn { width: 100%; background: #27ae60; color: white; border: none; padding: 8px; cursor: pointer; font-weight: bold; margin-top: 8px; border-radius: 4px; }
+
+        /* Modal / Cart Styling */
+        .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 200; justify-content: center; align-items: center; }
+        .modal-content { background: white; width: 90%; max-width: 450px; border-radius: 10px; padding: 20px; max-height: 90vh; overflow-y: auto; }
+        .close-btn { float: right; font-size: 20px; cursor: pointer; font-weight: bold; }
+        
+        .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .payment-info { background: #f8f9fa; border: 1px dashed #27ae60; padding: 12px; border-radius: 6px; margin: 15px 0; font-size: 13px; }
+        .qr-img { width: 120px; height: 120px; display: block; margin: 10px auto; border: 1px solid #ccc; }
+        
+        input, textarea { width: 100%; padding: 10px; margin: 6px 0 12px 0; border: 1px solid #ccc; border-radius: 4px; }
+        .submit-btn { width: 100%; background: #0088cc; color: white; border: none; padding: 12px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍺 İçki Dükanı</h1>
+    <button class="cart-btn" onclick="toggleCart()">Səbət (<span id="cart-count">0</span>)</button>
+</header>
+
+<div class="filters">
+    <div class="filter-group" id="category-filters">
+        <button class="filter-btn active" onclick="filterCat('all', this)">Bütün Kateqoriyalar</button>
+        <button class="filter-btn" onclick="filterCat('vodka', this)">Vodka</button>
+        <button class="filter-btn" onclick="filterCat('konyak', this)">Konyak</button>
+        <button class="filter-btn" onclick="filterCat('piva', this)">Pivə</button>
+        <button class="filter-btn" onclick="filterCat('vino', this)">Vino</button>
+        <button class="filter-btn" onclick="filterCat('sular', this)">Sular</button>
+        <button class="filter-btn" onclick="filterCat('siqaret', this)">Siqaretlər</button>
+        <button class="filter-btn" onclick="filterCat('chipsi', this)">Çipsilər</button>
+        <button class="filter-btn" onclick="filterCat('semichka', this)">Semıçkalar</button>
+    </div>
+    <div class="filter-group" id="size-filters">
+        <button class="filter-btn active" onclick="filterSize('all', this)">Bütün Həcmlər</button>
+        <button class="filter-btn" onclick="filterSize('3L', this)">3.0 L</button>
+        <button class="filter-btn" onclick="filterSize('1.5L', this)">1.5 L</button>
+        <button class="filter-btn" onclick="filterSize('1L', this)">1.0 L</button>
+        <button class="filter-btn" onclick="filterSize('0.7L', this)">0.7 L</button>
+        <button class="filter-btn" onclick="filterSize('0.5L', this)">0.5 L</button>
+        <button class="filter-btn" onclick="filterSize('0.45L', this)">0.45 L</button>
+        <button class="filter-btn" onclick="filterSize('0.25L', this)">0.25 L</button>
+        <button class="filter-btn" onclick="filterSize('0.1L', this)">0.1 L</button>
+    </div>
+</div>
+
+<div class="products-grid" id="product-list"></div>
+
+<!-- Səbət & Ödəniş Modalı -->
+<div class="modal" id="cart-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h3>Səbətiniz</h3>
+        <div id="cart-items" style="margin-top: 15px;"></div>
+        <p style="text-align: right; font-weight: bold; margin-top: 10px;">Cəmi: <span id="cart-total">0</span> AZN</p>
+        
+        <hr style="margin: 15px 0;">
+        
+        <h4>Ödəniş Məlumatları</h4>
+        <div class="payment-info">
+            <p><b>Plastik Kart:</b> 8600 **** **** 1234</p>
+            <p><b>Paynet QR Kod:</b></p>
+            <!-- Paynet QR kod şəklinin linkini buraya qoyun -->
+            <img src="https://via.placeholder.com/120?text=Paynet+QR" alt="Paynet QR" class="qr-img">
+            <p style="font-size: 11px; color: #555; text-align: center;">Ödənişi etdikdən sonra sifarişi təsdiqləyin.</p>
+        </div>
+
+        <h4>Çatdırılma Məlumatları</h4>
+        <form id="order-form" onsubmit="sendOrder(event)">
+            <input type="text" id="cust-name" placeholder="Adınız və Soyadınız" required>
+            <input type="tel" id="cust-phone" placeholder="Telefon Nömrəniz" required>
+            <textarea id="cust-address" placeholder="Səmt/Ünvan təsviri" rows="2" required></textarea>
+            
+            <button type="submit" class="submit-btn">Sifarişi Telegram-a Göndər</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Məhsul Bazası Nümunəsi (Bura öz məhsullarınızı əlavə edə bilərsiniz)
+    const products = [
+        { id: 1, name: "Vodka Absolute", cat: "vodka", size: "0.7L", price: 25, img: "https://via.placeholder.com/150" },
+        { id: 2, name: "Vodka Nemiroff", cat: "vodka", size: "0.5L", price: 12, img: "https://via.placeholder.com/150" },
+        { id: 3, name: "Konyak Hennessy", cat: "konyak", size: "0.7L", price: 85, img: "https://via.placeholder.com/150" },
+        { id: 4, name: "Pivə Efes", cat: "piva", size: "0.5L", price: 3.5, img: "https://via.placeholder.com/150" },
+        { id: 5, name: "Coca-Cola", cat: "sular", size: "1.5L", price: 2.2, img: "https://via.placeholder.com/150" },
+        { id: 6, name: "Lays Çipsi", cat: "chipsi", size: "-", price: 3.0, img: "https://via.placeholder.com/150" },
+        { id: 7, name: "Semıçka", cat: "semichka", size: "-", price: 1.5, img: "https://via.placeholder.com/150" }
+    ];
+
+    let currentCat = 'all';
+    let currentSize = 'all';
+    let cart = [];
+
+    // Telegram Bot Məlumatlarınız
+    const TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"; 
+    const TELEGRAM_CHAT_ID = "YOUR_TELEGRAM_CHAT_ID";
+
+    function renderProducts() {
+        const list = document.getElementById('product-list');
+        list.innerHTML = '';
+        
+        const filtered = products.filter(p => {
+            const catMatch = currentCat === 'all' || p.cat === currentCat;
+            const sizeMatch = currentSize === 'all' || p.size === currentSize;
+            return catMatch && sizeMatch;
+        });
+
+        filtered.forEach(p => {
+            list.innerHTML += `
+                <div class="product-card">
+                    <img src="${p.img}" class="product-img">
+                    <div class="product-info">
+                        <div class="product-title">${p.name}</div>
+                        <div class="product-meta">${p.size !== '-' ? p.size : ''}</div>
+                        <div class="product-price">${p.price} AZN</div>
+                        <button class="add-btn" onclick="addToCart(${p.id})">Səbətə At</button>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    function filterCat(cat, btn) {
+        currentCat = cat;
+        document.querySelectorAll('#category-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts();
+    }
+
+    function filterSize(size, btn) {
+        currentSize = size;
+        document.querySelectorAll('#size-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts();
+    }
+
+    function addToCart(id) {
+        const item = products.find(p => p.id === id);
+        cart.push(item);
+        updateCart();
+    }
+
+    function updateCart() {
+        document.getElementById('cart-count').innerText = cart.length;
+        const itemsContainer = document.getElementById('cart-items');
+        itemsContainer.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price;
+            itemsContainer.innerHTML += `
+                <div class="cart-item">
+                    <span>${item.name} (${item.size})</span>
+                    <span><b>${item.price} AZN</b></span>
+                </div>
+            `;
+        });
+        document.getElementById('cart-total').innerText = total.toFixed(2);
+    }
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    async function sendOrder(e) {
+        e.preventDefault();
+        if(cart.length === 0) { alert('Səbətiniz boşdur!'); return; }
+
+        const name = document.getElementById('cust-name').value;
+        const phone = document.getElementById('cust-phone').value;
+        const address = document.getElementById('cust-address').value;
+        
+        let orderList = cart.map(i => `- ${i.name} (${i.size}): ${i.price} AZN`).join('\n');
+        let total = document.getElementById('cart-total').innerText;
+
+        // Telegram Mesajı Formatı
+        let text = `🛍️ **YENİ SİFARİŞ!**\n\n`;
+        text += `👤 **Müştəri:** ${name}\n`;
+        text += `📞 **Tel:** ${phone}\n`;
+        text += `📍 **Ünvan:** ${address}\n\n`;
+        text += `🛒 **Məhsullar:**\n${orderList}\n\n`;
+        text += `💰 **Cəmi Məbləğ:** ${total} AZN\n\n`;
+        text += `⚠️ *Müştəridən Telegram vasitəsilə canlı konumu göndərməsini xahiş edin.*`;
+
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: text,
+                    parse_mode: 'Markdown'
+                })
+            });
+
+            if(response.ok) {
+                alert('Sifarişiniz qəbul olundu! Telegram vasitəsilə sizinlə əlaqə saxlanılacaq.');
+                cart = [];
+                updateCart();
+                toggleCart();
+            } else {
+                alert('Xəta baş verdi. Bot Token və Chat ID-ni yoxlayın.');
+            }
+        } catch(err) {
+            alert('Şəbəkə xətası baş verdi.');
+        }
+    }
+
+    // İlk yüklənmədə məhsulları göstər
+    renderProducts();
+</script>
+
+</body>
+</html>
