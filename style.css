@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkoqol va Ichimliklar Do'koni</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; padding-bottom: 80px; }
+        header { background: #1a252f; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        header h1 { font-size: 18px; }
+        
+        .lang-switcher { display: flex; gap: 5px; }
+        .lang-btn { background: #34495e; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .lang-btn.active { background: #e74c3c; }
+
+        .cart-btn { background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+        
+        .filters { padding: 15px; background: white; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .filter-group { margin-bottom: 10px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 5px; }
+        .filter-btn { background: #eef2f5; border: 1px solid #ddd; padding: 6px 14px; border-radius: 15px; cursor: pointer; white-space: nowrap; font-size: 13px; }
+        .filter-btn.active { background: #2c3e50; color: white; border-color: #2c3e50; }
+
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; padding: 0 15px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; }
+        .product-img { width: 100%; height: 130px; object-fit: cover; background: #eee; }
+        .product-info { padding: 10px; }
+        .product-title { font-size: 13px; font-weight: bold; margin-bottom: 5px; line-height: 1.2; height: 32px; overflow: hidden; }
+        .product-meta { font-size: 12px; color: #777; margin-bottom: 8px; }
+        .product-price { font-size: 14px; color: #27ae60; font-weight: bold; }
+        .add-btn { width: 100%; background: #27ae60; color: white; border: none; padding: 8px; cursor: pointer; font-weight: bold; margin-top: 8px; border-radius: 4px; }
+
+        .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 200; justify-content: center; align-items: center; }
+        .modal-content { background: white; width: 90%; max-width: 450px; border-radius: 10px; padding: 20px; max-height: 90vh; overflow-y: auto; }
+        .close-btn { float: right; font-size: 20px; cursor: pointer; font-weight: bold; }
+        
+        .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; font-size: 13px; }
+        .payment-info { background: #f8f9fa; border: 1px dashed #27ae60; padding: 12px; border-radius: 6px; margin: 15px 0; font-size: 13px; }
+        .qr-img { width: 120px; height: 120px; display: block; margin: 10px auto; border: 1px solid #ccc; }
+        
+        input, textarea { width: 100%; padding: 10px; margin: 6px 0 12px 0; border: 1px solid #ccc; border-radius: 4px; }
+        .submit-btn { width: 100%; background: #0088cc; color: white; border: none; padding: 12px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="shop-title">🍺 Do'kon</h1>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLanguage('uz')">UZ</button>
+        <button class="lang-btn" onclick="setLanguage('ru')">RU</button>
+    </div>
+    <button class="cart-btn" onclick="toggleCart()"><span id="lbl-cart">Savat</span> (<span id="cart-count">0</span>)</button>
+</header>
+
+<div class="filters">
+    <div class="filter-group" id="category-filters"></div>
+    <div class="filter-group" id="size-filters"></div>
+</div>
+
+<div class="products-grid" id="product-list"></div>
+
+<!-- Savat Modal -->
+<div class="modal" id="cart-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h3 id="lbl-cart-title">Savat</h3>
+        <div id="cart-items" style="margin-top: 15px;"></div>
+        <p style="text-align: right; font-weight: bold; margin-top: 10px;"><span id="lbl-total">Jami</span>: <span id="cart-total">0</span> so'm</p>
+        
+        <hr style="margin: 15px 0;">
+        
+        <h4 id="lbl-pay-title">To'lov ma'lumotlari</h4>
+        <div class="payment-info">
+            <p><b>Karta:</b> 8600 **** **** 1234</p>
+            <p><b>Paynet QR:</b></p>
+            <img src="https://via.placeholder.com/120?text=Paynet+QR" alt="Paynet QR" class="qr-img">
+        </div>
+
+        <h4 id="lbl-delivery-title">Etkazib berish</h4>
+        <form id="order-form" onsubmit="sendOrder(event)">
+            <input type="text" id="cust-name" placeholder="Ismingiz" required>
+            <input type="tel" id="cust-phone" placeholder="Telefon raqamingiz" required>
+            <textarea id="cust-address" placeholder="Manzil / Mo'ljal" rows="2" required></textarea>
+            <button type="submit" class="submit-btn" id="lbl-send-btn">Telegram orqali yuborish</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    let currentLang = 'uz';
+
+    const translations = {
+        uz: {
+            title: "🍺 Ichimliklar do'koni",
+            cart: "Savat",
+            cartTitle: "Sizning savatingiz",
+            total: "Jami",
+            payTitle: "To'lov ma'lumotlari",
+            deliveryTitle: "Etkazib berish ma'lumotlari",
+            sendBtn: "Buyurtmani yuborish",
+            namePlh: "Ism va familiyangiz",
+            phonePlh: "Telefon raqamingiz",
+            addrPlh: "Manzil va mo'ljal",
+            addBtn: "Savatga olish",
+            allCat: "Barchasi",
+            allSize: "Barcha hajmlar",
+            cats: { vodka: "Aroq (Vodka)", konyak: "Konyak", viski: "Viski", piva: "Pivo", vino: "Vino/Shampan", sular: "Suvlar/Sharbatlar", siqaret: "Sigaretlar", chipsi: "Chips/Pistalar" }
+        },
+        ru: {
+            title: "🍺 Магазин напитков",
+            cart: "Корзина",
+            cartTitle: "Ваша корзина",
+            total: "Итого",
+            payTitle: "Реквизиты для оплаты",
+            deliveryTitle: "Данные для доставки",
+            sendBtn: "Отправить заказ",
+            namePlh: "Ваше Имя и Фамилия",
+            phonePlh: "Ваш номер телефона",
+            addrPlh: "Адрес и ориентир",
+            addBtn: "В корзину",
+            allCat: "Все",
+            allSize: "Все объемы",
+            cats: { vodka: "Водка", konyak: "Коньяк", viski: "Виски", piva: "Пиво", vino: "Вино/Шампанское", sular: "Вода/Соки", siqaret: "Сигареты", chipsi: "Чипсы/Семечки" }
+        }
+    };
+
+    // Bütün 477 Məhsulunuz
+    const products = [file-tag: code-generated-file-47cb39df-001f-4856-ad35-c9e144c54012];
+
+    let currentCat = 'all';
+    let currentSize = 'all';
+    let cart = [];
+
+    // Telegram Bot Məlumatlarınız
+    const TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN";
+    const TELEGRAM_CHAT_ID = "YOUR_TELEGRAM_CHAT_ID";
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        if(event && event.target) event.target.classList.add('active');
+        
+        const t = translations[lang];
+        document.getElementById('shop-title').innerText = t.title;
+        document.getElementById('lbl-cart').innerText = t.cart;
+        document.getElementById('lbl-cart-title').innerText = t.cartTitle;
+        document.getElementById('lbl-total').innerText = t.total;
+        document.getElementById('lbl-pay-title').innerText = t.payTitle;
+        document.getElementById('lbl-delivery-title').innerText = t.deliveryTitle;
+        document.getElementById('lbl-send-btn').innerText = t.sendBtn;
+        
+        document.getElementById('cust-name').placeholder = t.namePlh;
+        document.getElementById('cust-phone').placeholder = t.phonePlh;
+        document.getElementById('cust-address').placeholder = t.addrPlh;
+
+        renderFilters();
+        renderProducts();
+    }
+
+    function renderFilters() {
+        const t = translations[currentLang];
+        const catContainer = document.getElementById('category-filters');
+        catContainer.innerHTML = `<button class="filter-btn ${currentCat === 'all' ? 'active' : ''}" onclick="filterCat('all', this)">${t.allCat}</button>`;
+        
+        Object.keys(t.cats).forEach(key => {
+            catContainer.innerHTML += `<button class="filter-btn ${currentCat === key ? 'active' : ''}" onclick="filterCat('${key}', this)">${t.cats[key]}</button>`;
+        });
+
+        const sizes = ['3L', '1.5L', '1L', '0.7L', '0.5L', '0.45L', '0.25L', '0.1L'];
+        const sizeContainer = document.getElementById('size-filters');
+        sizeContainer.innerHTML = `<button class="filter-btn ${currentSize === 'all' ? 'active' : ''}" onclick="filterSize('all', this)">${t.allSize}</button>`;
+        
+        sizes.forEach(s => {
+            sizeContainer.innerHTML += `<button class="filter-btn ${currentSize === s ? 'active' : ''}" onclick="filterSize('${s}', this)">${s}</button>`;
+        });
+    }
+
+    function renderProducts() {
+        const list = document.getElementById('product-list');
+        list.innerHTML = '';
+        const t = translations[currentLang];
+
+        const filtered = products.filter(p => {
+            const catMatch = currentCat === 'all' || p.cat === currentCat;
+            const sizeMatch = currentSize === 'all' || p.size === currentSize;
+            return catMatch && sizeMatch;
+        });
+
+        filtered.forEach(p => {
+            list.innerHTML += `
+                <div class="product-card">
+                    <img src="${p.img}" class="product-img">
+                    <div class="product-info">
+                        <div class="product-title" title="${p.name}">${p.name}</div>
+                        <div class="product-meta">${p.size !== '-' ? p.size : ''}</div>
+                        <div class="product-price">${p.price.toLocaleString()} so'm</div>
+                        <button class="add-btn" onclick="addToCart(${p.id})">${t.addBtn}</button>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    function filterCat(cat, btn) {
+        currentCat = cat;
+        document.querySelectorAll('#category-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts();
+    }
+
+    function filterSize(size, btn) {
+        currentSize = size;
+        document.querySelectorAll('#size-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts();
+    }
+
+    function addToCart(id) {
+        const item = products.find(p => p.id === id);
+        cart.push(item);
+        updateCart();
+    }
+
+    function updateCart() {
+        document.getElementById('cart-count').innerText = cart.length;
+        const itemsContainer = document.getElementById('cart-items');
+        itemsContainer.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item) => {
+            total += item.price;
+            itemsContainer.innerHTML += `
+                <div class="cart-item">
+                    <span>${item.name} (${item.size})</span>
+                    <span><b>${item.price.toLocaleString()} so'm</b></span>
+                </div>
+            `;
+        });
+        document.getElementById('cart-total').innerText = total.toLocaleString();
+    }
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    async function sendOrder(e) {
+        e.preventDefault();
+        if(cart.length === 0) { alert('Savat bo\'sh!'); return; }
+
+        const name = document.getElementById('cust-name').value;
+        const phone = document.getElementById('cust-phone').value;
+        const address = document.getElementById('cust-address').value;
+        
+        let orderList = cart.map(i => `- ${i.name} (${i.size}): ${i.price.toLocaleString()} so'm`).join('\n');
+        let total = document.getElementById('cart-total').innerText;
+
+        let text = `🛍️ **YANGI BUYURTMA!**\n\n`;
+        text += `👤 **Mijoz:** ${name}\n`;
+        text += `📞 **Tel:** ${phone}\n`;
+        text += `📍 **Manzil:** ${address}\n\n`;
+        text += `🛒 **Mahsulotlar:**\n${orderList}\n\n`;
+        text += `💰 **Jami:** ${total} so'm\n\n`;
+        text += `⚠️ *Mijozdan Telegram orqali jonli lokatsiyasini yuborishni so'rang.*`;
+
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: text,
+                    parse_mode: 'Markdown'
+                })
+            });
+
+            if(response.ok) {
+                alert('Buyurtmangiz qabul qilindi!');
+                cart = [];
+                updateCart();
+                toggleCart();
+            } else {
+                alert('Telegram Bot Token yoki Chat ID xato kiritilgan.');
+            }
+        } catch(err) {
+            alert('Xatolik yuz berdi.');
+        }
+    }
+
+    renderFilters();
+    renderProducts();
+</script>
+</body>
+</html>
