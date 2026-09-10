@@ -349,10 +349,10 @@ const jsonProducts = [
   {"id":2,"name":"лейз со вкусом\" сметана и зелень\" 225 гр","category":"CHIPS","price":35,"stock":4,"volume":null,"image":null},
   {"id":3,"name":"Джинн, Тузланмаган 350 грамм","category":"CHIPS","price":32,"stock":6,"volume":null,"image":null},
   {"id":4,"name":"Ermak Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакет 200 гр","category":"CHIPS","price":27,"stock":4,"volume":null,"image":null},
-  {"id":5,"name":"\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сметана и лук\"\" 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
-  {"id":6,"name":"\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сметана и зелень\"\" 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
-  {"id":7,"name":"\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Шашлык\"\" 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
-  {"id":8,"name":"\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сыр\"\" 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
+  {"id":5,"name":"Картофельные чипсы CHEERS со вкусом Сметана и лук 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
+  {"id":6,"name":"Картофельные чипсы CHEERS со вкусом Сметана и зелень 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
+  {"id":7,"name":"Картофельные чипсы CHEERS со вкусом Шашлык 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
+  {"id":8,"name":"Картофельные чипсы CHEERS со вкусом Сыр 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
   {"id":9,"name":"Чипсы LAYS (Краб) 140 гр","category":"CHIPS","price":25,"stock":2,"volume":null,"image":null},
   {"id":10,"name":"Чипсы Лейз со вкусом сметаны и зелени 140г","category":"CHIPS","price":25,"stock":2,"volume":null,"image":null},
   {"id":11,"name":"Lay's, кабоб таъми билан, пакет 140 гр.","category":"CHIPS","price":25,"stock":3,"volume":null,"image":null},
@@ -360,7 +360,7 @@ const jsonProducts = [
   {"id":13,"name":"Чипсы Lays 140г со вкусом сыр ООО ПепсиКо Холдингс","category":"CHIPS","price":25,"stock":5,"volume":null,"image":null},
   {"id":14,"name":"Чипсы Lays 140г картофельные со вкусом сметана лук","category":"CHIPS","price":25,"stock":8,"volume":null,"image":null},
   {"id":15,"name":"LAYS РЕФЛЕНЫЕ колбаски братвурст чипси 105г/g","category":"CHIPS","price":20,"stock":1,"volume":null,"image":null},
-  {"id":16,"name":"Lays сыр чеддер  с халапеньо чипс 105 г","category":"CHIPS","price":20,"stock":1,"volume":null,"image":null},
+  {"id":16,"name":"Lays сыр чеддер с халапеньо чипс 105 г","category":"CHIPS","price":20,"stock":1,"volume":null,"image":null},
   {"id":17,"name":"Cheers кўкатли сметана таъмли Металлаштирилган пакет 140 г.","category":"CHIPS","price":20,"stock":3,"volume":null,"image":null},
   {"id":18,"name":"Ermak, Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакетда 160 гр","category":"CHIPS","price":20,"stock":20,"volume":null,"image":null},
   {"id":19,"name":"Ermak тузланган писта 150гр","category":"CHIPS","price":20,"stock":21,"volume":null,"image":null},
@@ -379,9 +379,9 @@ const jsonProducts = [
   {"id":32,"name":"PEPSI, ширин ичимлик. ПЭТ бутилка 2,0 л.","category":"SUV","price":19,"stock":39,"volume":2,"image":null},
   {"id":33,"name":"Borjomi, ПЭТ бутилка 0,75 л","category":"SUV","price":18,"stock":1,"volume":0.75,"image":null},
   {"id":34,"name":"Red Bull 250q","category":"SUV","price":18,"stock":1,"volume":null,"image":null},
-  {"id":35,"name":"Borjomi, Шиша бутилка  0,5 л","category":"SUV","price":18,"stock":11,"volume":0.5,"image":null},
+  {"id":35,"name":"Borjomi, Шиша бутилка 0,5 л","category":"SUV","price":18,"stock":11,"volume":0.5,"image":null},
   {"id":36,"name":"Adrenaline Rush, Алюминий банка, 0,449 л","category":"SUV","price":16,"stock":37,"volume":0.449,"image":null},
-  {"id":37,"name":"Gorilla, Pomegranate Raspberry  алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45,"image":null},
+  {"id":37,"name":"Gorilla, Pomegranate Raspberry алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45,"image":null},
   {"id":38,"name":"Gorilla, Zero алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45,"image":null},
   {"id":39,"name":"Flash Up Energy, MORNING CAKES алюминий банка 0.450 л","category":"SUV","price":11,"stock":1,"volume":0.45,"image":null},
   {"id":40,"name":"Flash Up Energy женьшен экстракти билан алюминий банка 0,45 л","category":"SUV","price":11,"stock":2,"volume":0.45,"image":null},
@@ -488,7 +488,7 @@ const jsonProducts = [
 ];
 
 // ========== DATA STATE ==========
-let products = JSON.parse(localStorage.getItem('qacano_products') || 'null') || jsonProducts.map(p => ({...p, price: p.price * 1000})); // Convert price to so'm (assuming JSON is in thousands)
+let products = JSON.parse(localStorage.getItem('qacano_products') || 'null') || jsonProducts.map(p => ({...p, price: p.price * 1000}));
 let categories = JSON.parse(localStorage.getItem('qacano_categories') || 'null') || [
   { id: 1, name: 'CHIPS', icon: '🍟' }, { id: 2, name: 'SUV', icon: '🥤' },
   { id: 3, name: 'SİQARET', icon: '🚬' }, { id: 4, name: 'VİNO', icon: '🍷' },
@@ -572,7 +572,6 @@ function renderShop() {
     p.name.toLowerCase().includes(search) && (!catFilter || p.category === catFilter)
   );
 
-  // Populate category filter
   const sc = document.getElementById('shopCategory');
   if (sc) {
     const cur = sc.value;
@@ -653,32 +652,38 @@ function renderDashboard() {
   const catData = categories.map(c => products.filter(p => p.category === c.name).reduce((s, p) => s + p.stock, 0));
 
   if (charts.cat) charts.cat.destroy();
-  charts.cat = new Chart(document.getElementById('catChart'), {
-    type: 'bar',
-    data: {
-      labels: catLabels,
-      datasets: [{ label: 'Stok', data: catData, backgroundColor: 'rgba(212,175,55,0.7)', borderColor: '#d4af37', borderWidth: 1 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { labels: { color: '#ccc' } } },
-      scales: { x: { ticks: { color: '#888' }, grid: { color: '#1a1a1a' } }, y: { ticks: { color: '#888' }, grid: { color: '#1a1a1a' } } }
-    }
-  });
+  const catCtx = document.getElementById('catChart');
+  if (catCtx) {
+    charts.cat = new Chart(catCtx, {
+      type: 'bar',
+      data: {
+        labels: catLabels,
+        datasets: [{ label: 'Stok', data: catData, backgroundColor: 'rgba(212,175,55,0.7)', borderColor: '#d4af37', borderWidth: 1 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: { legend: { labels: { color: '#ccc' } } },
+        scales: { x: { ticks: { color: '#888' }, grid: { color: '#1a1a1a' } }, y: { ticks: { color: '#888' }, grid: { color: '#1a1a1a' } } }
+      }
+    });
+  }
 
   const top = [...products].sort((a, b) => b.stock - a.stock).slice(0, 5);
   if (charts.sales) charts.sales.destroy();
-  charts.sales = new Chart(document.getElementById('salesChart'), {
-    type: 'doughnut',
-    data: {
-      labels: top.map(p => p.name.substring(0, 20) + '...'),
-      datasets: [{ data: top.map(p => p.stock), backgroundColor: ['#d4af37','#b8941f','#8a6e17','#5c4a0f','#3a2f0a'] }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { position: 'bottom', labels: { color: '#ccc', font: { size: 11 } } } }
-    }
-  });
+  const salesCtx = document.getElementById('salesChart');
+  if (salesCtx) {
+    charts.sales = new Chart(salesCtx, {
+      type: 'doughnut',
+      data: {
+        labels: top.map(p => p.name.substring(0, 20) + '...'),
+        datasets: [{ data: top.map(p => p.stock), backgroundColor: ['#d4af37','#b8941f','#8a6e17','#5c4a0f','#3a2f0a'] }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: { legend: { position: 'bottom', labels: { color: '#ccc', font: { size: 11 } } } }
+      }
+    });
+  }
 }
 
 // ========== PRODUCTS ==========
@@ -692,7 +697,6 @@ function renderProducts() {
     p.name.toLowerCase().includes(search) && (!catFilter || p.category === catFilter)
   );
 
-  // Cat filter
   const cf = document.getElementById('catFilter');
   if (cf) {
     const cur = cf.value;
@@ -713,4 +717,9 @@ function renderProducts() {
       ? `<img src="${p.image}" class="w-12 h-12 rounded object-cover">`
       : `<div class="w-12 h-12 rounded bg-[#1a1a1a] flex items-center justify-center text-2xl">${cat.icon}</div>`;
     const stockBadge = p.stock === 0
-     
+      ? '<span class="badge bg-red-500/20 text-red-400">Bitib</span>'
+      : p.stock <= 5
+        ? `<span class="badge bg-red-500/20 text-red-400">${p.stock} ədəd</span>`
+        : `<span class="badge bg-emerald-500/20 text-emerald-400">${p.stock} ədəd</span>`;
+    const priceHtml = d
+      ? `<div class="line-through text-[#666] text-xs
