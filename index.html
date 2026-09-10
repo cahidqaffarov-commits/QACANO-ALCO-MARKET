@@ -55,7 +55,7 @@
 <!-- ==================== SHOP VIEW ==================== -->
 <div id="shopView">
   <div class="bg-[#070707] border-b border-[#1a1a1a] sticky top-0 z-40">
-    <div class="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
       <div class="flex items-center gap-4">
         <div class="w-12 h-12 rounded-full border-2 border-gold flex items-center justify-center">
           <span class="gold font-bold text-lg">Q</span>
@@ -65,7 +65,7 @@
           <p class="text-xs text-[#666] tracking-widest">PREMIUM SEÇİM</p>
         </div>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 flex-wrap">
         <input type="text" id="shopSearch" placeholder="🔍 Axtar..." class="input-dark w-64" oninput="renderShop()">
         <select id="shopCategory" class="input-dark w-44" onchange="renderShop()">
           <option value="">Bütün kateqoriyalar</option>
@@ -73,7 +73,6 @@
       </div>
     </div>
   </div>
-
   <div class="max-w-[1400px] mx-auto p-6">
     <h2 class="text-2xl font-bold mb-6">Məhsullar</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" id="shopProducts"></div>
@@ -167,10 +166,12 @@
         <div class="card p-5"><div class="text-[#888] text-sm">Bitənlər</div><div class="text-2xl font-bold text-red-600 mt-2" id="stockOut">0</div></div>
       </div>
       <div class="card overflow-hidden">
-        <table>
-          <thead><tr><th>Məhsul</th><th>Mövcud</th><th>Status</th><th>Qiymət</th><th>Dəyər</th><th>Əməliyyat</th></tr></thead>
-          <tbody id="stockTable"></tbody>
-        </table>
+        <div class="overflow-x-auto">
+          <table>
+            <thead><tr><th>Məhsul</th><th>Mövcud</th><th>Status</th><th>Qiymət</th><th>Dəyər</th><th>Əməliyyat</th></tr></thead>
+            <tbody id="stockTable"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -185,10 +186,12 @@
     <div id="tab-orders" class="tab-content hidden">
       <h2 class="text-2xl font-bold mb-6">Sifariş <span class="gold">Tarixçəsi</span></h2>
       <div class="card overflow-hidden">
-        <table>
-          <thead><tr><th>№</th><th>Müştəri</th><th>Telefon</th><th>Məhsul</th><th>Məbləğ</th><th>Tarix</th><th>Status</th><th>Əməliyyat</th></tr></thead>
-          <tbody id="ordersTable"></tbody>
-        </table>
+        <div class="overflow-x-auto">
+          <table>
+            <thead><tr><th>№</th><th>Müştəri</th><th>Telefon</th><th>Məhsul</th><th>Məbləğ</th><th>Tarix</th><th>Status</th><th>Əməliyyat</th></tr></thead>
+            <tbody id="ordersTable"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -198,10 +201,12 @@
         <button onclick="openUserModal()" class="btn-gold px-5 py-2.5 rounded-lg">+ Yeni İstifadəçi</button>
       </div>
       <div class="card overflow-hidden">
-        <table>
-          <thead><tr><th>Ad</th><th>Email</th><th>Rol</th><th>Status</th><th>Son Giriş</th><th>Əməliyyat</th></tr></thead>
-          <tbody id="usersTable"></tbody>
-        </table>
+        <div class="overflow-x-auto">
+          <table>
+            <thead><tr><th>Ad</th><th>Email</th><th>Rol</th><th>Status</th><th>Son Giriş</th><th>Əməliyyat</th></tr></thead>
+            <tbody id="usersTable"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -210,7 +215,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="card p-6">
           <h3 class="font-bold mb-4">📥 CSV İdxal</h3>
-          <div class="upload-zone" id="csvDropzone">
+          <div class="upload-zone">
             <div class="text-4xl mb-3">📄</div>
             <p class="mb-2">CSV faylı buraya sürükləyin</p>
             <p class="text-sm text-[#666] mb-4">və ya</p>
@@ -260,11 +265,11 @@
       </div>
       <div class="md:col-span-2">
         <label class="text-sm text-[#888] block mb-2">Məhsul Şəkli</label>
-        <div class="upload-zone" id="imageDropzone" onclick="document.getElementById('pImage').click()">
+        <div class="upload-zone" onclick="document.getElementById('pImage').click()">
           <img id="imagePreview" class="hidden max-h-[180px] mx-auto mb-3 rounded-lg object-contain">
           <div id="uploadPlaceholder">
             <div class="text-4xl mb-2">🖼️</div>
-            <p class="text-sm text-[#888]">Şəkli sürükləyin və ya seçin</p>
+            <p class="text-sm text-[#888]">Şəkli seçin</p>
           </div>
           <input type="file" id="pImage" accept="image/*" class="hidden">
         </div>
@@ -343,148 +348,148 @@
 <div id="toast" class="toast"></div>
 
 <script>
-// ========== PRODUCTS DATA FROM JSON (embedded) ==========
+// ========== PRODUCTS DATA (embedded from products.json) ==========
 const jsonProducts = [
-  {"id":1,"name":"Чипсы Lays 225 гр рифленые ( сметана и лук )","category":"CHIPS","price":35,"stock":3,"volume":null,"image":null},
-  {"id":2,"name":"лейз со вкусом\" сметана и зелень\" 225 гр","category":"CHIPS","price":35,"stock":4,"volume":null,"image":null},
-  {"id":3,"name":"Джинн, Тузланмаган 350 грамм","category":"CHIPS","price":32,"stock":6,"volume":null,"image":null},
-  {"id":4,"name":"Ermak Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакет 200 гр","category":"CHIPS","price":27,"stock":4,"volume":null,"image":null},
-  {"id":5,"name":"Картофельные чипсы CHEERS со вкусом Сметана и лук 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
-  {"id":6,"name":"Картофельные чипсы CHEERS со вкусом Сметана и зелень 210гр","category":"CHIPS","price":1,"stock":0,"volume":null,"image":null},
-  {"id":7,"name":"Картофельные чипсы CHEERS со вкусом Шашлык 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
-  {"id":8,"name":"Картофельные чипсы CHEERS со вкусом Сыр 210гр","category":"CHIPS","price":2,"stock":0,"volume":null,"image":null},
-  {"id":9,"name":"Чипсы LAYS (Краб) 140 гр","category":"CHIPS","price":25,"stock":2,"volume":null,"image":null},
-  {"id":10,"name":"Чипсы Лейз со вкусом сметаны и зелени 140г","category":"CHIPS","price":25,"stock":2,"volume":null,"image":null},
-  {"id":11,"name":"Lay's, кабоб таъми билан, пакет 140 гр.","category":"CHIPS","price":25,"stock":3,"volume":null,"image":null},
-  {"id":12,"name":"Чипсы Лейз Молодой зеленый лук 140г","category":"CHIPS","price":25,"stock":5,"volume":null,"image":null},
-  {"id":13,"name":"Чипсы Lays 140г со вкусом сыр ООО ПепсиКо Холдингс","category":"CHIPS","price":25,"stock":5,"volume":null,"image":null},
-  {"id":14,"name":"Чипсы Lays 140г картофельные со вкусом сметана лук","category":"CHIPS","price":25,"stock":8,"volume":null,"image":null},
-  {"id":15,"name":"LAYS РЕФЛЕНЫЕ колбаски братвурст чипси 105г/g","category":"CHIPS","price":20,"stock":1,"volume":null,"image":null},
-  {"id":16,"name":"Lays сыр чеддер с халапеньо чипс 105 г","category":"CHIPS","price":20,"stock":1,"volume":null,"image":null},
-  {"id":17,"name":"Cheers кўкатли сметана таъмли Металлаштирилган пакет 140 г.","category":"CHIPS","price":20,"stock":3,"volume":null,"image":null},
-  {"id":18,"name":"Ermak, Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакетда 160 гр","category":"CHIPS","price":20,"stock":20,"volume":null,"image":null},
-  {"id":19,"name":"Ermak тузланган писта 150гр","category":"CHIPS","price":20,"stock":21,"volume":null,"image":null},
-  {"id":20,"name":"FANTA Anor алюминий банка 0,45 л","category":"SUV","price":10,"stock":0,"volume":0.45,"image":null},
-  {"id":21,"name":"REDBUL 0.355L","category":"SUV","price":27,"stock":5,"volume":0.355,"image":null},
-  {"id":22,"name":"Borjomi ПЭТ бутилка 1,25 л","category":"SUV","price":24,"stock":3,"volume":1.25,"image":null},
-  {"id":23,"name":"Borjomi, ПЭТ бутилка 1,0 л","category":"SUV","price":22,"stock":2,"volume":1,"image":null},
-  {"id":24,"name":"Добрый олма, қора мевали четан ва малинали тетра пак 1 л","category":"SUV","price":21,"stock":1,"volume":1,"image":null},
-  {"id":25,"name":"Добрый олма шарбати 1 л","category":"SUV","price":21,"stock":1,"volume":1,"image":null},
-  {"id":26,"name":"Добрый олма-шафтолили тетра пак 1 л","category":"SUV","price":21,"stock":1,"volume":1,"image":null},
-  {"id":27,"name":"COCA-COLA, Classic пэт бутилка 2.5 л","category":"SUV","price":19,"stock":1,"volume":2.5,"image":null},
-  {"id":28,"name":"Red Bul Energy Drink o'rik va qulupnay 250ml","category":"SUV","price":19,"stock":2,"volume":null,"image":null},
-  {"id":29,"name":"FANTA, Apelsin Vitamin C пэт бутилка 2.5 л","category":"SUV","price":19,"stock":6,"volume":2.5,"image":null},
-  {"id":30,"name":"COCA-COLA, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":30,"volume":2,"image":null},
-  {"id":31,"name":"Fanta Orange, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":37,"volume":2,"image":null},
-  {"id":32,"name":"PEPSI, ширин ичимлик. ПЭТ бутилка 2,0 л.","category":"SUV","price":19,"stock":39,"volume":2,"image":null},
-  {"id":33,"name":"Borjomi, ПЭТ бутилка 0,75 л","category":"SUV","price":18,"stock":1,"volume":0.75,"image":null},
-  {"id":34,"name":"Red Bull 250q","category":"SUV","price":18,"stock":1,"volume":null,"image":null},
-  {"id":35,"name":"Borjomi, Шиша бутилка 0,5 л","category":"SUV","price":18,"stock":11,"volume":0.5,"image":null},
-  {"id":36,"name":"Adrenaline Rush, Алюминий банка, 0,449 л","category":"SUV","price":16,"stock":37,"volume":0.449,"image":null},
-  {"id":37,"name":"Gorilla, Pomegranate Raspberry алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45,"image":null},
-  {"id":38,"name":"Gorilla, Zero алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45,"image":null},
-  {"id":39,"name":"Flash Up Energy, MORNING CAKES алюминий банка 0.450 л","category":"SUV","price":11,"stock":1,"volume":0.45,"image":null},
-  {"id":40,"name":"Flash Up Energy женьшен экстракти билан алюминий банка 0,45 л","category":"SUV","price":11,"stock":2,"volume":0.45,"image":null},
-  {"id":41,"name":"Flash Up Energy, NIGHT MOVIE алюминий банка 0.450 л","category":"SUV","price":11,"stock":2,"volume":0.45,"image":null},
-  {"id":42,"name":"Flash Up Energy, BUBBLE GUM алюмин банка 0.45 л","category":"SUV","price":11,"stock":3,"volume":0.45,"image":null},
-  {"id":43,"name":"Flash Up Energy, MOJITO SRAWBERRY алюминий банка 0,45 л","category":"SUV","price":11,"stock":9,"volume":0.45,"image":null},
-  {"id":44,"name":"COCA-COLA, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":30,"volume":2,"image":null},
-  {"id":45,"name":"COCA-COLA, ширин, ПЭТ бутилка 1,5 л.","category":"SUV","price":15,"stock":100,"volume":1.5,"image":null},
-  {"id":46,"name":"Алкоголсиз ичимликлар (газланган ва газланмаган) COCA-COLA газланган ширин пэт бутилка 1 л.","category":"SUV","price":11,"stock":2,"volume":1,"image":null},
-  {"id":47,"name":"COCA-COLA, ширин, ПЭТ бутилка 1,0 л.","category":"SUV","price":11,"stock":129,"volume":1,"image":null},
-  {"id":48,"name":"COCA-COLA Schweppes Tonic алюминий банка 0,25 л","category":"SUV","price":10,"stock":5,"volume":0.25,"image":null},
-  {"id":49,"name":"COCA-COLA, Classic алюминий банка 0.45 л","category":"SUV","price":10,"stock":15,"volume":0.45,"image":null},
-  {"id":50,"name":"COCA-COLA, ширин, ПЭТ бутилка 0,5 л.","category":"SUV","price":7,"stock":97,"volume":0.5,"image":null},
-  {"id":51,"name":"Fanta Orange, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":37,"volume":2,"image":null},
-  {"id":52,"name":"FANTA, Apelsin Vitamin C пэт бутилка 2.5 л","category":"SUV","price":19,"stock":6,"volume":2.5,"image":null},
-  {"id":53,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,5 л.","category":"SUV","price":15,"stock":31,"volume":1.5,"image":null},
-  {"id":54,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,0 л.","category":"SUV","price":11,"stock":29,"volume":1,"image":null},
-  {"id":55,"name":"FANTA Anor алюминий банка 0,45 л","category":"SUV","price":10,"stock":0,"volume":0.45,"image":null},
-  {"id":56,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 0,5 л.","category":"SUV","price":7,"stock":18,"volume":0.5,"image":null},
-  {"id":57,"name":"Omaf, газланмаган ПЭТ бутилка 1,5 л.","category":"SUV","price":6,"stock":117,"volume":1.5,"image":null},
-  {"id":58,"name":"Omaf, ПЭТ бутилка 1,0 л.","category":"SUV","price":5,"stock":71,"volume":1,"image":null},
-  {"id":59,"name":"Omaf, газланмаган ПЭТ бутилка 1,0 л.","category":"SUV","price":5,"stock":158,"volume":1,"image":null},
-  {"id":60,"name":"Omaf, (газ) 0,5 л","category":"SUV","price":3,"stock":143,"volume":0.5,"image":null},
-  {"id":61,"name":"Omaf, газланмаган ПЭТ бутилка 0,5 л.","category":"SUV","price":3,"stock":176,"volume":0.5,"image":null},
-  {"id":62,"name":"Omaf, газланмаган ПЭТ бутилка 0,35 л.","category":"SUV","price":3,"stock":177,"volume":0.35,"image":null},
-  {"id":63,"name":"Hydrolife, пэт бутилка 10 л","category":"SUV","price":12,"stock":40,"volume":10,"image":null},
-  {"id":64,"name":"Hydrolife пэт бутилка 5,0 л","category":"SUV","price":8,"stock":9,"volume":5,"image":null},
-  {"id":65,"name":"Hydrolife пэт бутилка (Газ) 1,5 л","category":"SUV","price":5,"stock":54,"volume":1.5,"image":null},
-  {"id":66,"name":"Hydrolife пэт бутилка (Без газа)1,5 л","category":"SUV","price":5,"stock":109,"volume":1.5,"image":null},
-  {"id":67,"name":"Hydrolife пэт бутилка (Газ) 1,0 л","category":"SUV","price":4,"stock":53,"volume":1,"image":null},
-  {"id":68,"name":"Hydrolife пэт бутилка (Без газа) 1,0 л","category":"SUV","price":4,"stock":134,"volume":1,"image":null},
-  {"id":69,"name":"Hydrolife пэт бутилка (Без газа) 0,5 л","category":"SUV","price":3,"stock":45,"volume":0.5,"image":null},
-  {"id":70,"name":"Hydrolife пэт бутилка (Газ) 0,5 л","category":"SUV","price":3,"stock":106,"volume":0.5,"image":null},
-  {"id":71,"name":"ESSE, CHANGE","category":"SİQARET","price":28,"stock":29,"volume":null,"image":null},
-  {"id":72,"name":"ESSE, CHANGE UP","category":"SİQARET","price":26,"stock":6,"volume":null,"image":null},
-  {"id":73,"name":"Parlament, Parlament Ocean Cruise","category":"SİQARET","price":26,"stock":6,"volume":null,"image":null},
-  {"id":74,"name":"ESSE, CHANGE M","category":"SİQARET","price":25,"stock":1,"volume":null,"image":null},
-  {"id":75,"name":"ESSE, CHANGE S","category":"SİQARET","price":25,"stock":1,"volume":null,"image":null},
-  {"id":76,"name":"Фильтрли сигаретлар Parliament Manhattan Red","category":"SİQARET","price":25,"stock":3,"volume":null,"image":null},
-  {"id":77,"name":"ESSE, CHANGE UP","category":"SİQARET","price":26,"stock":6,"volume":null,"image":null},
-  {"id":78,"name":"Parlament, Parlament Ocean Cruise","category":"SİQARET","price":26,"stock":6,"volume":null,"image":null},
-  {"id":79,"name":"ESSE, SILVER GRIP STYLE","category":"SİQARET","price":25,"stock":4,"volume":null,"image":null},
-  {"id":80,"name":"Parliament, Super Slims","category":"SİQARET","price":25,"stock":7,"volume":null,"image":null},
-  {"id":81,"name":"Parliament, LINE 100 GREEN FUSE","category":"SİQARET","price":25,"stock":8,"volume":null,"image":null},
-  {"id":82,"name":"ESSE, CHANGE GRIP STYLE","category":"SİQARET","price":25,"stock":9,"volume":null,"image":null},
-  {"id":83,"name":"Parlament, Parlament Exotic Cruise","category":"SİQARET","price":25,"stock":9,"volume":null,"image":null},
-  {"id":84,"name":"Sobranie, Sobranie Black (тонкие)","category":"SİQARET","price":25,"stock":12,"volume":null,"image":null},
-  {"id":85,"name":"Parliament, Parliament Aqua Blue","category":"SİQARET","price":25,"stock":17,"volume":null,"image":null},
-  {"id":86,"name":"Ароқ (2) Ayyu lux қуввати 40% шиша бутилка 0,25 л","category":"SİQARET","price":25,"stock":18,"volume":0.25,"image":null},
-  {"id":87,"name":"Parliament, Reserve Fuse","category":"SİQARET","price":25,"stock":20,"volume":null,"image":null},
-  {"id":88,"name":"Parliament, Reserve","category":"SİQARET","price":25,"stock":20,"volume":null,"image":null},
-  {"id":89,"name":"Parliament, Parliament Silver Blue","category":"SİQARET","price":25,"stock":32,"volume":null,"image":null},
-  {"id":90,"name":"Parliament, LINE 100 WINTER FUSE","category":"SİQARET","price":25,"stock":40,"volume":null,"image":null},
-  {"id":91,"name":"Parlament, Reserve 100 Summer Fuse","category":"SİQARET","price":25,"stock":40,"volume":null,"image":null},
-  {"id":92,"name":"Фильтрли сигаретлар Kent НD Blue 8","category":"SİQARET","price":24,"stock":1,"volume":null,"image":null},
-  {"id":93,"name":"Фильтрли сигаретлар Kent Kent Nano 4","category":"SİQARET","price":24,"stock":8,"volume":null,"image":null},
-  {"id":94,"name":"Фильтрли сигаретлар Kent Kent Blue","category":"SİQARET","price":24,"stock":9,"volume":null,"image":null},
-  {"id":95,"name":"Фильтрли сигаретлар Kent Mix Nano","category":"SİQARET","price":24,"stock":10,"volume":null,"image":null},
-  {"id":96,"name":"Kent, Beat Blue","category":"SİQARET","price":24,"stock":20,"volume":null,"image":null},
-  {"id":97,"name":"Kent, Kent Mix","category":"SİQARET","price":24,"stock":21,"volume":null,"image":null},
-  {"id":98,"name":"Winston, FINELINE CASTER+","category":"SİQARET","price":23,"stock":1,"volume":null,"image":null},
-  {"id":99,"name":"ESSE, CHANGE DEEP BROWN","category":"SİQARET","price":23,"stock":1,"volume":null,"image":null},
-  {"id":100,"name":"Winston, Super Slims Caster+","category":"SİQARET","price":23,"stock":1,"volume":null,"image":null},
-  {"id":101,"name":"Фильтрли сигаретлар ESSE CHANGE COLD BLACK","category":"SİQARET","price":23,"stock":2,"volume":null,"image":null},
-  {"id":102,"name":"TEREA, SUMMER WAVE","category":"SİQARET","price":23,"stock":2,"volume":null,"image":null},
-  {"id":103,"name":"Ароқ (2) JIGAR қуввати 40% шиша бутилка 0,25 л","category":"SİQARET","price":23,"stock":3,"volume":0.25,"image":null},
-  {"id":104,"name":"Қиздириладиган тамаки таёқчалари (стиклар) TEREA PURPLE WAVE","category":"SİQARET","price":23,"stock":3,"volume":null,"image":null},
-  {"id":105,"name":"TEREA, YELLOW","category":"SİQARET","price":23,"stock":4,"volume":null,"image":null},
-  {"id":106,"name":"TEREA, AMBER","category":"SİQARET","price":23,"stock":4,"volume":null,"image":null},
-  {"id":107,"name":"Winston, XStyle Shiny Mix","category":"SİQARET","price":23,"stock":7,"volume":null,"image":null},
-  {"id":108,"name":"Winston, Winston XStyle Silver","category":"SİQARET","price":23,"stock":19,"volume":null,"image":null},
-  {"id":109,"name":"Kent, MCR BLUE 20 дона","category":"SİQARET","price":23,"stock":60,"volume":null,"image":null},
-  {"id":110,"name":"Winston, Winston Compact Caster","category":"SİQARET","price":23,"stock":60,"volume":null,"image":null},
-  {"id":111,"name":"Winston, Winston XStyle Blue","category":"SİQARET","price":23,"stock":190,"volume":null,"image":null},
-  {"id":112,"name":"Фильтрли сигаретлар Winston SUMMER MIX","category":"SİQARET","price":22,"stock":1,"volume":null,"image":null},
-  {"id":113,"name":"Dunhill_deluxe_click_сигарет","category":"SİQARET","price":22,"stock":1,"volume":null,"image":null},
-  {"id":114,"name":"Pall Mall, FLORIDA SUNRISE","category":"SİQARET","price":22,"stock":31,"volume":null,"image":null},
-  {"id":115,"name":"Pall Mall, 100s Blue","category":"SİQARET","price":22,"stock":68,"volume":null,"image":null},
-  {"id":116,"name":"Kent, Kent mode 6","category":"SİQARET","price":21,"stock":25,"volume":null,"image":null},
-  {"id":117,"name":"Pall Mall, Pall Mall Vegas Nights","category":"SİQARET","price":21,"stock":183,"volume":null,"image":null},
-  {"id":118,"name":"BOHEM, LIBRE RED","category":"SİQARET","price":20,"stock":1,"volume":null,"image":null},
-  {"id":119,"name":"SIMPLE, MYSTIC PURPLE","category":"SİQARET","price":20,"stock":1,"volume":null,"image":null},
-  {"id":120,"name":"Pall Mall, Alaska Nights","category":"SİQARET","price":20,"stock":2,"volume":null,"image":null},
-  {"id":121,"name":"Фильтрли сигаретлар PINE BLUE","category":"SİQARET","price":20,"stock":6,"volume":null,"image":null},
-  {"id":122,"name":"Pall Mall, Pall Mall Dubai Nights","category":"SİQARET","price":19,"stock":1,"volume":null,"image":null},
-  {"id":123,"name":"Pall Mall, Pall Mall Nanokings Blue","category":"SİQARET","price":19,"stock":2,"volume":null,"image":null},
-  {"id":124,"name":"Milano, NEW YORK","category":"SİQARET","price":19,"stock":2,"volume":null,"image":null},
-  {"id":125,"name":"Pall Mall, Classic Blue","category":"SİQARET","price":19,"stock":17,"volume":null,"image":null},
-  {"id":126,"name":"Насвай (2000)","category":"SİQARET","price":2,"stock":7,"volume":null,"image":null},
-  {"id":127,"name":"Вино (2) Jaume serra жилвали Cava Chardonnay Gran Reserva қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":471,"stock":1,"volume":0.75,"image":null},
-  {"id":128,"name":"Вино (2) Cava Jaume Serra Brut Organic қуввати 11.5% шиша бутилка 0.75 л","category":"VİNO","price":235,"stock":1,"volume":0.75,"image":null},
-  {"id":129,"name":"Вино (2) Jaume serra жилвали Cava Brut Nature Vintage қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":234,"stock":1,"volume":0.75,"image":null},
-  {"id":130,"name":"Вино (2) Cava Jaume Serra Brut Nature қуввати 11.5% шиша бутилка 0.75 л","category":"VİNO","price":230,"stock":1,"volume":0.75,"image":null},
-  {"id":131,"name":"Вино (2) Jaume serra жилоли оқ брют қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":230,"stock":1,"volume":0.75,"image":null},
-  {"id":132,"name":"Вино (2) Jaume serra жилоли полуқуруқ оқ қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":230,"stock":1,"volume":0.75,"image":null},
-  {"id":133,"name":"Вино (2) Mukuzani dry red wine қуввати 12% шиша бутилка 0,75 л","category":"VİNO","price":170,"stock":1,"volume":0.75,"image":null},
-  {"id":134,"name":"Вино (2) Pata Negra DO Toro қуввати 14% шиша бутилка 0.75 л","category":"VİNO","price":160,"stock":1,"volume":0.75,"image":null},
-  {"id":135,"name":"Вино CHARDONNAY оқ қуруқ Don Simon Nature қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null},
-  {"id":136,"name":"Вино (2) Castillo San Simon Rose крепость 11,5% стеклянная бутылка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null},
-  {"id":137,"name":"Вино (2) Castillo San Simon Chardonnay крепость 11,5% стеклянная бутылка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null},
-  {"id":138,"name":"Вино (2) Castillo San Simon Sweet Red крепость 11% стеклянная бутылка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null},
-  {"id":139,"name":"Вино (2) DON SIMON оқ қуруқ NATURE SAUVIGNON BLANC қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null},
-  {"id":140,"name":"Вино (2) DON SIMON қуруқ пушти Nature Rose қуввати 11,5% шиша бутилка 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75,"image":null}
+  {"id":1,"name":"Чипсы Lays 225 гр рифленые ( сметана и лук )","category":"CHIPS","price":35,"stock":3,"volume":null},
+  {"id":2,"name":"лейз со вкусом сметана и зелень 225 гр","category":"CHIPS","price":35,"stock":4,"volume":null},
+  {"id":3,"name":"Джинн, Тузланмаган 350 грамм","category":"CHIPS","price":32,"stock":6,"volume":null},
+  {"id":4,"name":"Ermak Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакет 200 гр","category":"CHIPS","price":27,"stock":4,"volume":null},
+  {"id":5,"name":"Картофельные чипсы CHEERS со вкусом Сметана и лук 210гр","category":"CHIPS","price":1,"stock":0,"volume":null},
+  {"id":6,"name":"Картофельные чипсы CHEERS со вкусом Сметана и зелень 210гр","category":"CHIPS","price":1,"stock":0,"volume":null},
+  {"id":7,"name":"Картофельные чипсы CHEERS со вкусом Шашлык 210гр","category":"CHIPS","price":2,"stock":0,"volume":null},
+  {"id":8,"name":"Картофельные чипсы CHEERS со вкусом Сыр 210гр","category":"CHIPS","price":2,"stock":0,"volume":null},
+  {"id":9,"name":"Чипсы LAYS (Краб) 140 гр","category":"CHIPS","price":25,"stock":2,"volume":null},
+  {"id":10,"name":"Чипсы Лейз со вкусом сметаны и зелени 140г","category":"CHIPS","price":25,"stock":2,"volume":null},
+  {"id":11,"name":"Lay's, кабоб таъми билан, пакет 140 гр.","category":"CHIPS","price":25,"stock":3,"volume":null},
+  {"id":12,"name":"Чипсы Лейз Молодой зеленый лук 140г","category":"CHIPS","price":25,"stock":5,"volume":null},
+  {"id":13,"name":"Чипсы Lays 140г со вкусом сыр ООО ПепсиКо Холдингс","category":"CHIPS","price":25,"stock":5,"volume":null},
+  {"id":14,"name":"Чипсы Lays 140г картофельные со вкусом сметана лук","category":"CHIPS","price":25,"stock":8,"volume":null},
+  {"id":15,"name":"LAYS РЕФЛЕНЫЕ колбаски братвурст чипси 105г","category":"CHIPS","price":20,"stock":1,"volume":null},
+  {"id":16,"name":"Lays сыр чеддер с халапеньо чипс 105 г","category":"CHIPS","price":20,"stock":1,"volume":null},
+  {"id":17,"name":"Cheers кўкатли сметана таъмли Металлаштирилган пакет 140 г.","category":"CHIPS","price":20,"stock":3,"volume":null},
+  {"id":18,"name":"Ermak, Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакетда 160 гр","category":"CHIPS","price":20,"stock":20,"volume":null},
+  {"id":19,"name":"Ermak тузланган писта 150гр","category":"CHIPS","price":20,"stock":21,"volume":null},
+  {"id":20,"name":"FANTA Anor алюминий банка 0,45 л","category":"SUV","price":10,"stock":0,"volume":0.45},
+  {"id":21,"name":"REDBUL 0.355L","category":"SUV","price":27,"stock":5,"volume":0.355},
+  {"id":22,"name":"Borjomi ПЭТ бутилка 1,25 л","category":"SUV","price":24,"stock":3,"volume":1.25},
+  {"id":23,"name":"Borjomi, ПЭТ бутилка 1,0 л","category":"SUV","price":22,"stock":2,"volume":1},
+  {"id":24,"name":"Добрый олма, қора мевали четан ва малинали тетра пак 1 л","category":"SUV","price":21,"stock":1,"volume":1},
+  {"id":25,"name":"Добрый олма шарбати 1 л","category":"SUV","price":21,"stock":1,"volume":1},
+  {"id":26,"name":"Добрый олма-шафтолили тетра пак 1 л","category":"SUV","price":21,"stock":1,"volume":1},
+  {"id":27,"name":"COCA-COLA, Classic пэт бутилка 2.5 л","category":"SUV","price":19,"stock":1,"volume":2.5},
+  {"id":28,"name":"Red Bul Energy Drink o'rik va qulupnay 250ml","category":"SUV","price":19,"stock":2,"volume":null},
+  {"id":29,"name":"FANTA, Apelsin Vitamin C пэт бутилка 2.5 л","category":"SUV","price":19,"stock":6,"volume":2.5},
+  {"id":30,"name":"COCA-COLA, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":30,"volume":2},
+  {"id":31,"name":"Fanta Orange, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":37,"volume":2},
+  {"id":32,"name":"PEPSI, ширин ичимлик. ПЭТ бутилка 2,0 л.","category":"SUV","price":19,"stock":39,"volume":2},
+  {"id":33,"name":"Borjomi, ПЭТ бутилка 0,75 л","category":"SUV","price":18,"stock":1,"volume":0.75},
+  {"id":34,"name":"Red Bull 250q","category":"SUV","price":18,"stock":1,"volume":null},
+  {"id":35,"name":"Borjomi, Шиша бутилка 0,5 л","category":"SUV","price":18,"stock":11,"volume":0.5},
+  {"id":36,"name":"Adrenaline Rush, Алюминий банка, 0,449 л","category":"SUV","price":16,"stock":37,"volume":0.449},
+  {"id":37,"name":"Gorilla, Pomegranate Raspberry алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45},
+  {"id":38,"name":"Gorilla, Zero алюминий банка 0.45 л","category":"SUV","price":12,"stock":2,"volume":0.45},
+  {"id":39,"name":"Flash Up Energy, MORNING CAKES алюминий банка 0.450 л","category":"SUV","price":11,"stock":1,"volume":0.45},
+  {"id":40,"name":"Flash Up Energy женьшен экстракти билан алюминий банка 0,45 л","category":"SUV","price":11,"stock":2,"volume":0.45},
+  {"id":41,"name":"Flash Up Energy, NIGHT MOVIE алюминий банка 0.450 л","category":"SUV","price":11,"stock":2,"volume":0.45},
+  {"id":42,"name":"Flash Up Energy, BUBBLE GUM алюмин банка 0.45 л","category":"SUV","price":11,"stock":3,"volume":0.45},
+  {"id":43,"name":"Flash Up Energy, MOJITO SRAWBERRY алюминий банка 0,45 л","category":"SUV","price":11,"stock":9,"volume":0.45},
+  {"id":44,"name":"COCA-COLA, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":30,"volume":2},
+  {"id":45,"name":"COCA-COLA, ширин, ПЭТ бутилка 1,5 л.","category":"SUV","price":15,"stock":100,"volume":1.5},
+  {"id":46,"name":"COCA-COLA газланган ширин пэт бутилка 1 л.","category":"SUV","price":11,"stock":2,"volume":1},
+  {"id":47,"name":"COCA-COLA, ширин, ПЭТ бутилка 1,0 л.","category":"SUV","price":11,"stock":129,"volume":1},
+  {"id":48,"name":"COCA-COLA Schweppes Tonic алюминий банка 0,25 л","category":"SUV","price":10,"stock":5,"volume":0.25},
+  {"id":49,"name":"COCA-COLA, Classic алюминий банка 0.45 л","category":"SUV","price":10,"stock":15,"volume":0.45},
+  {"id":50,"name":"COCA-COLA, ширин, ПЭТ бутилка 0,5 л.","category":"SUV","price":7,"stock":97,"volume":0.5},
+  {"id":51,"name":"Fanta Orange, ПЭТ бутилка 2 л","category":"SUV","price":19,"stock":37,"volume":2},
+  {"id":52,"name":"FANTA, Apelsin Vitamin C пэт бутилка 2.5 л","category":"SUV","price":19,"stock":6,"volume":2.5},
+  {"id":53,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,5 л.","category":"SUV","price":15,"stock":31,"volume":1.5},
+  {"id":54,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,0 л.","category":"SUV","price":11,"stock":29,"volume":1},
+  {"id":55,"name":"FANTA Anor алюминий банка 0,45 л","category":"SUV","price":10,"stock":0,"volume":0.45},
+  {"id":56,"name":"FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 0,5 л.","category":"SUV","price":7,"stock":18,"volume":0.5},
+  {"id":57,"name":"Omaf, газланмаган ПЭТ бутилка 1,5 л.","category":"SUV","price":6,"stock":117,"volume":1.5},
+  {"id":58,"name":"Omaf, ПЭТ бутилка 1,0 л.","category":"SUV","price":5,"stock":71,"volume":1},
+  {"id":59,"name":"Omaf, газланмаган ПЭТ бутилка 1,0 л.","category":"SUV","price":5,"stock":158,"volume":1},
+  {"id":60,"name":"Omaf, (газ) 0,5 л","category":"SUV","price":3,"stock":143,"volume":0.5},
+  {"id":61,"name":"Omaf, газланмаган ПЭТ бутилка 0,5 л.","category":"SUV","price":3,"stock":176,"volume":0.5},
+  {"id":62,"name":"Omaf, газланмаган ПЭТ бутилка 0,35 л.","category":"SUV","price":3,"stock":177,"volume":0.35},
+  {"id":63,"name":"Hydrolife, пэт бутилка 10 л","category":"SUV","price":12,"stock":40,"volume":10},
+  {"id":64,"name":"Hydrolife пэт бутилка 5,0 л","category":"SUV","price":8,"stock":9,"volume":5},
+  {"id":65,"name":"Hydrolife пэт бутилка (Газ) 1,5 л","category":"SUV","price":5,"stock":54,"volume":1.5},
+  {"id":66,"name":"Hydrolife пэт бутилка (Без газа)1,5 л","category":"SUV","price":5,"stock":109,"volume":1.5},
+  {"id":67,"name":"Hydrolife пэт бутилка (Газ) 1,0 л","category":"SUV","price":4,"stock":53,"volume":1},
+  {"id":68,"name":"Hydrolife пэт бутилка (Без газа) 1,0 л","category":"SUV","price":4,"stock":134,"volume":1},
+  {"id":69,"name":"Hydrolife пэт бутилка (Без газа) 0,5 л","category":"SUV","price":3,"stock":45,"volume":0.5},
+  {"id":70,"name":"Hydrolife пэт бутилка (Газ) 0,5 л","category":"SUV","price":3,"stock":106,"volume":0.5},
+  {"id":71,"name":"ESSE, CHANGE","category":"SİQARET","price":28,"stock":29,"volume":null},
+  {"id":72,"name":"ESSE, CHANGE UP","category":"SİQARET","price":26,"stock":6,"volume":null},
+  {"id":73,"name":"Parlament, Parlament Ocean Cruise","category":"SİQARET","price":26,"stock":6,"volume":null},
+  {"id":74,"name":"ESSE, CHANGE M","category":"SİQARET","price":25,"stock":1,"volume":null},
+  {"id":75,"name":"ESSE, CHANGE S","category":"SİQARET","price":25,"stock":1,"volume":null},
+  {"id":76,"name":"Фильтрли сигаретлар Parliament Manhattan Red","category":"SİQARET","price":25,"stock":3,"volume":null},
+  {"id":77,"name":"ESSE, CHANGE UP","category":"SİQARET","price":26,"stock":6,"volume":null},
+  {"id":78,"name":"Parlament, Parlament Ocean Cruise","category":"SİQARET","price":26,"stock":6,"volume":null},
+  {"id":79,"name":"ESSE, SILVER GRIP STYLE","category":"SİQARET","price":25,"stock":4,"volume":null},
+  {"id":80,"name":"Parliament, Super Slims","category":"SİQARET","price":25,"stock":7,"volume":null},
+  {"id":81,"name":"Parliament, LINE 100 GREEN FUSE","category":"SİQARET","price":25,"stock":8,"volume":null},
+  {"id":82,"name":"ESSE, CHANGE GRIP STYLE","category":"SİQARET","price":25,"stock":9,"volume":null},
+  {"id":83,"name":"Parlament, Parlament Exotic Cruise","category":"SİQARET","price":25,"stock":9,"volume":null},
+  {"id":84,"name":"Sobranie, Sobranie Black (тонкие)","category":"SİQARET","price":25,"stock":12,"volume":null},
+  {"id":85,"name":"Parliament, Parliament Aqua Blue","category":"SİQARET","price":25,"stock":17,"volume":null},
+  {"id":86,"name":"Ароқ (2) Ayyu lux қуввати 40% шиша бутилка 0,25 л","category":"SİQARET","price":25,"stock":18,"volume":0.25},
+  {"id":87,"name":"Parliament, Reserve Fuse","category":"SİQARET","price":25,"stock":20,"volume":null},
+  {"id":88,"name":"Parliament, Reserve","category":"SİQARET","price":25,"stock":20,"volume":null},
+  {"id":89,"name":"Parliament, Parliament Silver Blue","category":"SİQARET","price":25,"stock":32,"volume":null},
+  {"id":90,"name":"Parliament, LINE 100 WINTER FUSE","category":"SİQARET","price":25,"stock":40,"volume":null},
+  {"id":91,"name":"Parlament, Reserve 100 Summer Fuse","category":"SİQARET","price":25,"stock":40,"volume":null},
+  {"id":92,"name":"Фильтрли сигаретлар Kent НD Blue 8","category":"SİQARET","price":24,"stock":1,"volume":null},
+  {"id":93,"name":"Фильтрли сигаретлар Kent Kent Nano 4","category":"SİQARET","price":24,"stock":8,"volume":null},
+  {"id":94,"name":"Фильтрли сигаретлар Kent Kent Blue","category":"SİQARET","price":24,"stock":9,"volume":null},
+  {"id":95,"name":"Фильтрли сигаретлар Kent Mix Nano","category":"SİQARET","price":24,"stock":10,"volume":null},
+  {"id":96,"name":"Kent, Beat Blue","category":"SİQARET","price":24,"stock":20,"volume":null},
+  {"id":97,"name":"Kent, Kent Mix","category":"SİQARET","price":24,"stock":21,"volume":null},
+  {"id":98,"name":"Winston, FINELINE CASTER+","category":"SİQARET","price":23,"stock":1,"volume":null},
+  {"id":99,"name":"ESSE, CHANGE DEEP BROWN","category":"SİQARET","price":23,"stock":1,"volume":null},
+  {"id":100,"name":"Winston, Super Slims Caster+","category":"SİQARET","price":23,"stock":1,"volume":null},
+  {"id":101,"name":"Фильтрли сигаретлар ESSE CHANGE COLD BLACK","category":"SİQARET","price":23,"stock":2,"volume":null},
+  {"id":102,"name":"TEREA, SUMMER WAVE","category":"SİQARET","price":23,"stock":2,"volume":null},
+  {"id":103,"name":"Ароқ (2) JIGAR қуввати 40% шиша бутилка 0,25 л","category":"SİQARET","price":23,"stock":3,"volume":0.25},
+  {"id":104,"name":"TEREA PURPLE WAVE стиклар","category":"SİQARET","price":23,"stock":3,"volume":null},
+  {"id":105,"name":"TEREA, YELLOW","category":"SİQARET","price":23,"stock":4,"volume":null},
+  {"id":106,"name":"TEREA, AMBER","category":"SİQARET","price":23,"stock":4,"volume":null},
+  {"id":107,"name":"Winston, XStyle Shiny Mix","category":"SİQARET","price":23,"stock":7,"volume":null},
+  {"id":108,"name":"Winston, Winston XStyle Silver","category":"SİQARET","price":23,"stock":19,"volume":null},
+  {"id":109,"name":"Kent, MCR BLUE 20 дона","category":"SİQARET","price":23,"stock":60,"volume":null},
+  {"id":110,"name":"Winston, Winston Compact Caster","category":"SİQARET","price":23,"stock":60,"volume":null},
+  {"id":111,"name":"Winston, Winston XStyle Blue","category":"SİQARET","price":23,"stock":190,"volume":null},
+  {"id":112,"name":"Фильтрли сигаретлар Winston SUMMER MIX","category":"SİQARET","price":22,"stock":1,"volume":null},
+  {"id":113,"name":"Dunhill_deluxe_click_сигарет","category":"SİQARET","price":22,"stock":1,"volume":null},
+  {"id":114,"name":"Pall Mall, FLORIDA SUNRISE","category":"SİQARET","price":22,"stock":31,"volume":null},
+  {"id":115,"name":"Pall Mall, 100s Blue","category":"SİQARET","price":22,"stock":68,"volume":null},
+  {"id":116,"name":"Kent, Kent mode 6","category":"SİQARET","price":21,"stock":25,"volume":null},
+  {"id":117,"name":"Pall Mall, Pall Mall Vegas Nights","category":"SİQARET","price":21,"stock":183,"volume":null},
+  {"id":118,"name":"BOHEM, LIBRE RED","category":"SİQARET","price":20,"stock":1,"volume":null},
+  {"id":119,"name":"SIMPLE, MYSTIC PURPLE","category":"SİQARET","price":20,"stock":1,"volume":null},
+  {"id":120,"name":"Pall Mall, Alaska Nights","category":"SİQARET","price":20,"stock":2,"volume":null},
+  {"id":121,"name":"Фильтрли сигаретлар PINE BLUE","category":"SİQARET","price":20,"stock":6,"volume":null},
+  {"id":122,"name":"Pall Mall, Pall Mall Dubai Nights","category":"SİQARET","price":19,"stock":1,"volume":null},
+  {"id":123,"name":"Pall Mall, Pall Mall Nanokings Blue","category":"SİQARET","price":19,"stock":2,"volume":null},
+  {"id":124,"name":"Milano, NEW YORK","category":"SİQARET","price":19,"stock":2,"volume":null},
+  {"id":125,"name":"Pall Mall, Classic Blue","category":"SİQARET","price":19,"stock":17,"volume":null},
+  {"id":126,"name":"Насвай (2000)","category":"SİQARET","price":2,"stock":7,"volume":null},
+  {"id":127,"name":"Вино (2) Jaume serra жилвали Cava Chardonnay Gran Reserva 11,5% 0,75 л","category":"VİNO","price":471,"stock":1,"volume":0.75},
+  {"id":128,"name":"Вино (2) Cava Jaume Serra Brut Organic 11.5% 0.75 л","category":"VİNO","price":235,"stock":1,"volume":0.75},
+  {"id":129,"name":"Вино (2) Jaume serra Cava Brut Nature Vintage 11,5% 0,75 л","category":"VİNO","price":234,"stock":1,"volume":0.75},
+  {"id":130,"name":"Вино (2) Cava Jaume Serra Brut Nature 11.5% 0.75 л","category":"VİNO","price":230,"stock":1,"volume":0.75},
+  {"id":131,"name":"Вино (2) Jaume serra оқ брют 11,5% 0,75 л","category":"VİNO","price":230,"stock":1,"volume":0.75},
+  {"id":132,"name":"Вино (2) Jaume serra полуқуруқ оқ 11,5% 0,75 л","category":"VİNO","price":230,"stock":1,"volume":0.75},
+  {"id":133,"name":"Вино (2) Mukuzani dry red wine 12% 0,75 л","category":"VİNO","price":170,"stock":1,"volume":0.75},
+  {"id":134,"name":"Вино (2) Pata Negra DO Toro 14% 0.75 л","category":"VİNO","price":160,"stock":1,"volume":0.75},
+  {"id":135,"name":"Вино CHARDONNAY оқ қуруқ Don Simon Nature 11,5% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75},
+  {"id":136,"name":"Вино (2) Castillo San Simon Rose 11,5% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75},
+  {"id":137,"name":"Вино (2) Castillo San Simon Chardonnay 11,5% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75},
+  {"id":138,"name":"Вино (2) Castillo San Simon Sweet Red 11% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75},
+  {"id":139,"name":"Вино (2) DON SIMON NATURE SAUVIGNON BLANC 11,5% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75},
+  {"id":140,"name":"Вино (2) DON SIMON Nature Rose 11,5% 0,75 л","category":"VİNO","price":148,"stock":1,"volume":0.75}
 ];
 
 // ========== DATA STATE ==========
@@ -496,18 +501,15 @@ let categories = JSON.parse(localStorage.getItem('qacano_categories') || 'null')
   { id: 7, name: 'KONYAK', icon: '🥂' }, { id: 8, name: 'SHAMPAN', icon: '🍾' },
   { id: 9, name: 'PIVO', icon: '🍺' }
 ];
-
 let discounts = JSON.parse(localStorage.getItem('qacano_discounts') || 'null') || [
   { id: 1, productId: 5, percent: 15, active: true },
   { id: 2, productId: 10, percent: 10, active: true }
 ];
-
 let orders = JSON.parse(localStorage.getItem('qacano_orders') || 'null') || [
   { id: 1001, customer: 'Ali Valiyev', phone: '+998 90 123 45 67', product: 'Чипсы Lays', amount: 35000, date: '2024-01-15', status: 'Tamamlandı' },
   { id: 1002, customer: 'Zarina Karimova', phone: '+998 91 234 56 78', product: 'Coca-Cola 2L', amount: 19000, date: '2024-01-15', status: 'Gözləmədə' },
   { id: 1003, customer: 'Bobur Ahmedov', phone: '+998 93 345 67 89', product: 'Jack Daniels', amount: 675000, date: '2024-01-14', status: 'Tamamlandı' }
 ];
-
 let users = JSON.parse(localStorage.getItem('qacano_users') || 'null') || [
   { id: 1, name: 'Admin', email: 'admin@qacano.uz', role: 'Admin', active: true, lastLogin: '2024-01-15 10:23' },
   { id: 2, name: 'Operator 1', email: 'op1@qacano.uz', role: 'Operator', active: true, lastLogin: '2024-01-14 18:45' }
@@ -605,7 +607,7 @@ function renderShop() {
           <span class="badge bg-[#1e1e1e] text-[#aaa]">${cat.icon} ${p.category}</span>
           ${stockBadge}
         </div>
-        <h3 class="font-bold mb-2 line-clamp-2">${p.name}</h3>
+        <h3 class="font-bold mb-2 line-clamp-2" style="min-height:2.5rem">${p.name}</h3>
         ${d ? `<div class="line-through text-[#666] text-xs">${formatPrice(p.price)}</div>` : ''}
         <div class="text-xl font-bold gold mb-3">${formatPrice(price)}</div>
         <button onclick="buyProduct(${p.id})" class="w-full btn-gold py-2.5 rounded-lg ${p.stock === 0 ? 'opacity-50 cursor-not-allowed' : ''}" ${p.stock === 0 ? 'disabled' : ''}>
@@ -656,10 +658,7 @@ function renderDashboard() {
   if (catCtx) {
     charts.cat = new Chart(catCtx, {
       type: 'bar',
-      data: {
-        labels: catLabels,
-        datasets: [{ label: 'Stok', data: catData, backgroundColor: 'rgba(212,175,55,0.7)', borderColor: '#d4af37', borderWidth: 1 }]
-      },
+      data: { labels: catLabels, datasets: [{ label: 'Stok', data: catData, backgroundColor: 'rgba(212,175,55,0.7)', borderColor: '#d4af37', borderWidth: 1 }] },
       options: {
         responsive: true, maintainAspectRatio: true,
         plugins: { legend: { labels: { color: '#ccc' } } },
@@ -674,14 +673,8 @@ function renderDashboard() {
   if (salesCtx) {
     charts.sales = new Chart(salesCtx, {
       type: 'doughnut',
-      data: {
-        labels: top.map(p => p.name.substring(0, 20) + '...'),
-        datasets: [{ data: top.map(p => p.stock), backgroundColor: ['#d4af37','#b8941f','#8a6e17','#5c4a0f','#3a2f0a'] }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: true,
-        plugins: { legend: { position: 'bottom', labels: { color: '#ccc', font: { size: 11 } } } }
-      }
+      data: { labels: top.map(p => p.name.substring(0, 20) + '...'), datasets: [{ data: top.map(p => p.stock), backgroundColor: ['#d4af37','#b8941f','#8a6e17','#5c4a0f','#3a2f0a'] }] },
+      options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'bottom', labels: { color: '#ccc', font: { size: 11 } } } } }
     });
   }
 }
@@ -710,7 +703,7 @@ function renderProducts() {
     return;
   }
 
-  tbody.innerHTML = filtered.slice(0, 100).map(p => {
+  tbody.innerHTML = filtered.slice(0, 150).map(p => {
     const cat = categories.find(c => c.name === p.category) || { icon: '📦' };
     const d = getDiscount(p.id);
     const img = p.image
@@ -722,4 +715,355 @@ function renderProducts() {
         ? `<span class="badge bg-red-500/20 text-red-400">${p.stock} ədəd</span>`
         : `<span class="badge bg-emerald-500/20 text-emerald-400">${p.stock} ədəd</span>`;
     const priceHtml = d
-      ? `<div class="line-through text-[#666] text-xs
+      ? `<div class="line-through text-[#666] text-xs">${formatPrice(p.price)}</div><div class="text-red-400 font-bold">${formatPrice(finalPrice(p))}</div>`
+      : `<div class="font-bold">${formatPrice(p.price)}</div>`;
+
+    return `<tr>
+      <td>${img}</td>
+      <td class="max-w-[300px]">${p.name}</td>
+      <td><span class="badge bg-[#1e1e1e] text-[#aaa]">${cat.icon} ${p.category}</span></td>
+      <td>${priceHtml}</td>
+      <td>${stockBadge}</td>
+      <td>${d ? `<span class="badge bg-red-500/20 text-red-400">-${d.percent}%</span>` : '<span class="text-[#444]">—</span>'}</td>
+      <td>
+        <button onclick="editProduct(${p.id})" class="px-3 py-1 rounded border border-[#333] hover:border-gold text-xs mr-1">✏️</button>
+        <button onclick="deleteProduct(${p.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function openProductModal() {
+  document.getElementById('productModalTitle').textContent = 'Yeni Məhsul';
+  document.getElementById('pId').value = '';
+  document.getElementById('pName').value = '';
+  document.getElementById('pPrice').value = '';
+  document.getElementById('pStock').value = '';
+  document.getElementById('pVolume').value = '';
+  document.getElementById('imagePreview').classList.add('hidden');
+  document.getElementById('uploadPlaceholder').classList.remove('hidden');
+  document.getElementById('imagePreview').src = '';
+  const sel = document.getElementById('pCategory');
+  sel.innerHTML = categories.map(c => `<option value="${c.name}">${c.icon} ${c.name}</option>`).join('');
+  openModal('productModal');
+}
+
+function editProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('productModalTitle').textContent = 'Məhsulu Redaktə Et';
+  document.getElementById('pId').value = p.id;
+  document.getElementById('pName').value = p.name;
+  document.getElementById('pPrice').value = p.price;
+  document.getElementById('pStock').value = p.stock;
+  document.getElementById('pVolume').value = p.volume || '';
+  const sel = document.getElementById('pCategory');
+  sel.innerHTML = categories.map(c => `<option value="${c.name}">${c.icon} ${c.name}</option>`).join('');
+  sel.value = p.category;
+  if (p.image) {
+    document.getElementById('imagePreview').src = p.image;
+    document.getElementById('imagePreview').classList.remove('hidden');
+    document.getElementById('uploadPlaceholder').classList.add('hidden');
+  } else {
+    document.getElementById('imagePreview').classList.add('hidden');
+    document.getElementById('uploadPlaceholder').classList.remove('hidden');
+  }
+  openModal('productModal');
+}
+
+function saveProduct() {
+  const id = document.getElementById('pId').value;
+  const name = document.getElementById('pName').value.trim();
+  const category = document.getElementById('pCategory').value;
+  const price = parseInt(document.getElementById('pPrice').value);
+  const stock = parseInt(document.getElementById('pStock').value);
+  const volume = parseFloat(document.getElementById('pVolume').value) || null;
+  const imgEl = document.getElementById('imagePreview');
+  const image = imgEl.src && !imgEl.classList.contains('hidden') ? imgEl.src : null;
+
+  if (!name || !price || isNaN(stock)) { showToast('Ad, qiymət və stok mütləqdir!', 'error'); return; }
+
+  if (id) {
+    const p = products.find(x => x.id === parseInt(id));
+    if (p) Object.assign(p, { name, category, price, stock, volume, image });
+    showToast('Məhsul yeniləndi ✅');
+  } else {
+    products.push({ id: nextId++, name, category, price, stock, volume, image });
+    showToast('Məhsul əlavə edildi ✅');
+  }
+  save(); renderProducts(); renderDashboard();
+  closeModal('productModal');
+}
+
+function deleteProduct(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  products = products.filter(p => p.id !== id);
+  save(); renderProducts(); renderDashboard(); renderStock();
+  showToast('Məhsul silindi 🗑️');
+}
+
+// ========== CATEGORIES ==========
+function renderCategories() {
+  const grid = document.getElementById('categoriesGrid');
+  if (!grid) return;
+  grid.innerHTML = categories.map(c => {
+    const count = products.filter(p => p.category === c.name).length;
+    return `<div class="card p-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="text-3xl">${c.icon}</div>
+        <div><div class="font-bold">${c.name}</div><div class="text-xs text-[#666]">${count} məhsul</div></div>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="editCategory(${c.id})" class="px-3 py-1 rounded border border-[#333] hover:border-gold text-xs">✏️</button>
+        <button onclick="deleteCategory(${c.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openCategoryModal() {
+  document.getElementById('categoryModalTitle').textContent = 'Yeni Kateqoriya';
+  document.getElementById('cId').value = '';
+  document.getElementById('cName').value = '';
+  document.getElementById('cIcon').value = '';
+  openModal('categoryModal');
+}
+function editCategory(id) {
+  const c = categories.find(x => x.id === id);
+  if (!c) return;
+  document.getElementById('categoryModalTitle').textContent = 'Kateqoriyanı Redaktə Et';
+  document.getElementById('cId').value = c.id;
+  document.getElementById('cName').value = c.name;
+  document.getElementById('cIcon').value = c.icon;
+  openModal('categoryModal');
+}
+function saveCategory() {
+  const id = document.getElementById('cId').value;
+  const name = document.getElementById('cName').value.trim().toUpperCase();
+  const icon = document.getElementById('cIcon').value.trim() || '📦';
+  if (!name) { showToast('Ad mütləqdir!', 'error'); return; }
+  if (id) {
+    const c = categories.find(x => x.id === parseInt(id));
+    if (c) { c.name = name; c.icon = icon; }
+    showToast('Kateqoriya yeniləndi ✅');
+  } else {
+    categories.push({ id: nextCatId++, name, icon });
+    showToast('Kateqoriya əlavə edildi ✅');
+  }
+  save(); renderCategories(); renderProducts(); renderDashboard();
+  closeModal('categoryModal');
+}
+function deleteCategory(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  categories = categories.filter(c => c.id !== id);
+  save(); renderCategories(); renderProducts();
+  showToast('Kateqoriya silindi 🗑️');
+}
+
+// ========== STOCK ==========
+function renderStock() {
+  const tbody = document.getElementById('stockTable');
+  if (!tbody) return;
+  document.getElementById('stockTotal').textContent = products.length;
+  document.getElementById('stockLow').textContent = products.filter(p => p.stock > 0 && p.stock <= 5).length;
+  document.getElementById('stockOut').textContent = products.filter(p => p.stock === 0).length;
+
+  const sorted = [...products].sort((a, b) => a.stock - b.stock);
+  tbody.innerHTML = sorted.map(p => {
+    const status = p.stock === 0
+      ? '<span class="badge bg-red-500/20 text-red-400">Bitib</span>'
+      : p.stock <= 5
+        ? '<span class="badge bg-red-500/20 text-red-400">Az qalıb</span>'
+        : '<span class="badge bg-emerald-500/20 text-emerald-400">Yaxşı</span>';
+    return `<tr>
+      <td>${p.name}</td>
+      <td class="font-bold">${p.stock}</td>
+      <td>${status}</td>
+      <td>${formatPrice(p.price)}</td>
+      <td class="gold">${formatPrice(p.price * p.stock)}</td>
+      <td>
+        <button onclick="adjustStock(${p.id}, 1)" class="px-2 py-1 rounded border border-[#333] hover:border-emerald-400 text-xs">+1</button>
+        <button onclick="adjustStock(${p.id}, -1)" class="px-2 py-1 rounded border border-[#333] hover:border-red-400 text-xs ml-1">-1</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+function adjustStock(id, delta) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  p.stock = Math.max(0, p.stock + delta);
+  save(); renderStock(); renderProducts(); renderDashboard();
+}
+
+// ========== DISCOUNTS ==========
+function renderDiscounts() {
+  const grid = document.getElementById('discountsGrid');
+  if (!grid) return;
+  if (discounts.length === 0) {
+    grid.innerHTML = '<div class="card p-10 text-center text-[#666] md:col-span-3">Hələ endirim yoxdur</div>';
+    return;
+  }
+  grid.innerHTML = discounts.map(d => {
+    const p = products.find(x => x.id === d.productId);
+    if (!p) return '';
+    const newPrice = Math.round(p.price * (1 - d.percent/100));
+    return `<div class="card p-5">
+      <div class="flex items-center justify-between mb-3">
+        <span class="badge bg-red-500/20 text-red-400">-${d.percent}%</span>
+        <button onclick="deleteDiscount(${d.id})" class="text-[#666] hover:text-red-400">🗑️</button>
+      </div>
+      <div class="font-bold mb-2">${p.name.substring(0, 40)}</div>
+      <div class="text-sm text-[#888] mb-1 line-through">${formatPrice(p.price)}</div>
+      <div class="text-2xl font-bold gold">${formatPrice(newPrice)}</div>
+    </div>`;
+  }).join('');
+}
+function openDiscountModal() {
+  const sel = document.getElementById('dProduct');
+  sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+  document.getElementById('dPercent').value = '';
+  openModal('discountModal');
+}
+function saveDiscount() {
+  const productId = parseInt(document.getElementById('dProduct').value);
+  const percent = parseInt(document.getElementById('dPercent').value);
+  if (!percent || percent < 1 || percent > 90) { showToast('1-90 arası faiz daxil edin!', 'error'); return; }
+  discounts.push({ id: Date.now(), productId, percent, active: true });
+  save(); renderDiscounts(); renderProducts(); renderDashboard();
+  closeModal('discountModal');
+  showToast('Endirim tətbiq edildi ✅');
+}
+function deleteDiscount(id) {
+  discounts = discounts.filter(d => d.id !== id);
+  save(); renderDiscounts(); renderProducts();
+  showToast('Endirim silindi 🗑️');
+}
+
+// ========== ORDERS ==========
+function renderOrders() {
+  const tbody = document.getElementById('ordersTable');
+  if (!tbody) return;
+  tbody.innerHTML = orders.map(o => {
+    const statusColors = { 'Tamamlandı': 'bg-emerald-500/20 text-emerald-400', 'Gözləmədə': 'bg-yellow-500/20 text-yellow-400', 'Ləğv edildi': 'bg-red-500/20 text-red-400' };
+    return `<tr>
+      <td class="font-mono">#${o.id}</td>
+      <td>${o.customer}</td>
+      <td>${o.phone}</td>
+      <td>${o.product}</td>
+      <td class="gold font-bold">${formatPrice(o.amount)}</td>
+      <td class="text-[#888]">${o.date}</td>
+      <td><span class="badge ${statusColors[o.status] || 'bg-[#1e1e1e]'}">${o.status}</span></td>
+      <td><button onclick="deleteOrder(${o.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button></td>
+    </tr>`;
+  }).join('');
+}
+function deleteOrder(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  orders = orders.filter(o => o.id !== id);
+  save(); renderOrders(); renderDashboard();
+  showToast('Sifariş silindi 🗑️');
+}
+
+// ========== USERS ==========
+function renderUsers() {
+  const tbody = document.getElementById('usersTable');
+  if (!tbody) return;
+  tbody.innerHTML = users.map(u => `<tr>
+    <td>${u.name}</td>
+    <td>${u.email}</td>
+    <td><span class="badge bg-[#1e1e1e] text-[#aaa]">${u.role}</span></td>
+    <td>${u.active ? '<span class="badge bg-emerald-500/20 text-emerald-400">Aktiv</span>' : '<span class="badge bg-red-500/20 text-red-400">Deaktiv</span>'}</td>
+    <td class="text-[#888]">${u.lastLogin}</td>
+    <td><button onclick="deleteUser(${u.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button></td>
+  </tr>`).join('');
+}
+function openUserModal() {
+  document.getElementById('uName').value = '';
+  document.getElementById('uEmail').value = '';
+  document.getElementById('uRole').value = 'Admin';
+  openModal('userModal');
+}
+function saveUser() {
+  const name = document.getElementById('uName').value.trim();
+  const email = document.getElementById('uEmail').value.trim();
+  const role = document.getElementById('uRole').value;
+  if (!name || !email) { showToast('Ad və email mütləqdir!', 'error'); return; }
+  users.push({ id: Date.now(), name, email, role, active: true, lastLogin: new Date().toLocaleString() });
+  save(); renderUsers();
+  closeModal('userModal');
+  showToast('İstifadəçi əlavə edildi ✅');
+}
+function deleteUser(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  users = users.filter(u => u.id !== id);
+  save(); renderUsers();
+  showToast('İstifadəçi silindi 🗑️');
+}
+
+// ========== CSV / EXPORT ==========
+function exportAll() {
+  const backup = { products, categories, discounts, orders, users };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'qacano_backup_' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  showToast('Backup yükləndi 📤');
+}
+function exportCSV() {
+  let csv = 'ad,kateqoriya,qiymet,stok\n';
+  products.forEach(p => { csv += `"${p.name.replace(/"/g,'""')}","${p.category}",${p.price},${p.stock}\n`; });
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'qacano_products.csv';
+  a.click();
+  showToast('CSV yükləndi 📤');
+}
+
+document.getElementById('csvInput')?.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const lines = ev.target.result.split('\n').slice(1);
+    let added = 0;
+    lines.forEach(line => {
+      if (!line.trim()) return;
+      const parts = line.split(',');
+      if (parts.length >= 4) {
+        const name = parts[0].replace(/"/g, '').trim();
+        const category = parts[1].replace(/"/g, '').trim();
+        const price = parseInt(parts[2]);
+        const stock = parseInt(parts[3]);
+        if (name && !isNaN(price)) {
+          products.push({ id: nextId++, name, category, price, stock, volume: null, image: null });
+          added++;
+        }
+      }
+    });
+    save(); renderProducts(); renderDashboard();
+    showToast(added + ' məhsul idxal edildi ✅');
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById('pImage')?.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    document.getElementById('imagePreview').src = ev.target.result;
+    document.getElementById('imagePreview').classList.remove('hidden');
+    document.getElementById('uploadPlaceholder').classList.add('hidden');
+  };
+  reader.readAsDataURL(file);
+});
+
+// ========== INIT ==========
+document.addEventListener('DOMContentLoaded', () => {
+  renderShop();
+});
+</script>
+</body>
+</html>
