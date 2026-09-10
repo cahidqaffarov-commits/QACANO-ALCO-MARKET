@@ -1,0 +1,4822 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Чипсы Lays 225 гр рифленые ( сметана и лук )",
+      "category": "CHIPS",
+      "price": 35,
+      "stock": 3,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 2,
+      "name": "лейз со вкусом\" сметана и зелень\" 225 гр",
+      "category": "CHIPS",
+      "price": 35,
+      "stock": 4,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 3,
+      "name": "Джинн, Тузланмаган 350 грамм",
+      "category": "CHIPS",
+      "price": 32,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 4,
+      "name": "Ermak Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакет 200 гр",
+      "category": "CHIPS",
+      "price": 27,
+      "stock": 4,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 5,
+      "name": "\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сметана и лук\"\" 210гр",
+      "category": "CHIPS",
+      "price": 1,
+      "stock": 0,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 6,
+      "name": "\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сметана и зелень\"\" 210гр",
+      "category": "CHIPS",
+      "price": 1,
+      "stock": 0,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 7,
+      "name": "\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Шашлык\"\" 210гр",
+      "category": "CHIPS",
+      "price": 2,
+      "stock": 0,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 8,
+      "name": "\"Картофельные чипсы \"\"CHEERS\"\" со вкусом \"\"Сыр\"\" 210гр",
+      "category": "CHIPS",
+      "price": 2,
+      "stock": 0,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 9,
+      "name": "Чипсы LAYS (Краб) 140 гр",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 10,
+      "name": "Чипсы Лейз со вкусом сметаны и зелени 140г",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 11,
+      "name": "Lay's, кабоб таъми билан, пакет 140 гр.",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 3,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 12,
+      "name": "Чипсы Лейз Молодой зеленый лук 140г",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 5,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 13,
+      "name": "Чипсы Lays 140г со вкусом сыр ООО ПепсиКо Холдингс",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 5,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 14,
+      "name": "Чипсы Lays 140г картофельные со вкусом сметана лук",
+      "category": "CHIPS",
+      "price": 25,
+      "stock": 8,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 15,
+      "name": "LAYS РЕФЛЕНЫЕ колбаски братвурст чипси 105г/g",
+      "category": "CHIPS",
+      "price": 20,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 16,
+      "name": "Lays сыр чеддер  с халапеньо чипс 105 г",
+      "category": "CHIPS",
+      "price": 20,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 17,
+      "name": "Cheers кўкатли сметана таъмли Металлаштирилган пакет 140 г.",
+      "category": "CHIPS",
+      "price": 20,
+      "stock": 3,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 18,
+      "name": "Ermak, Кунгабоқар уруғи қовурилган қора тузланмаган, полиэтилен пакетда 160 гр",
+      "category": "CHIPS",
+      "price": 20,
+      "stock": 20,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 19,
+      "name": "Ermak тузланган писта 150гр",
+      "category": "CHIPS",
+      "price": 20,
+      "stock": 21,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 20,
+      "name": "FANTA Anor алюминий банка 0,45 л",
+      "category": "SUV",
+      "price": 10,
+      "stock": 0,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 21,
+      "name": "REDBUL 0.355L",
+      "category": "SUV",
+      "price": 27,
+      "stock": 5,
+      "volume": 0.355,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 22,
+      "name": "Borjomi ПЭТ бутилка 1,25 л",
+      "category": "SUV",
+      "price": 24,
+      "stock": 3,
+      "volume": 1.25,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 23,
+      "name": "Borjomi, ПЭТ бутилка 1,0 л",
+      "category": "SUV",
+      "price": 22,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 24,
+      "name": "Добрый олма, қора мевали четан ва малинали тетра пак 1 л",
+      "category": "SUV",
+      "price": 21,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 25,
+      "name": "Добрый олма шарбати 1 л",
+      "category": "SUV",
+      "price": 21,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 26,
+      "name": "Добрый олма-шафтолили тетра пак 1 л",
+      "category": "SUV",
+      "price": 21,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 27,
+      "name": "COCA-COLA, Classic пэт бутилка 2.5 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 1,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 28,
+      "name": "Red Bul Energy Drink o'rik va qulupnay 250ml",
+      "category": "SUV",
+      "price": 19,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 29,
+      "name": "FANTA, Apelsin Vitamin C пэт бутилка 2.5 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 6,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 30,
+      "name": "COCA-COLA, ПЭТ бутилка 2 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 30,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 31,
+      "name": "Fanta Orange, ПЭТ бутилка 2 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 37,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 32,
+      "name": "PEPSI, ширин ичимлик. ПЭТ бутилка 2,0 л.",
+      "category": "SUV",
+      "price": 19,
+      "stock": 39,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 33,
+      "name": "Borjomi, ПЭТ бутилка 0,75 л",
+      "category": "SUV",
+      "price": 18,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 34,
+      "name": "Red Bull 250q",
+      "category": "SUV",
+      "price": 18,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 35,
+      "name": "Borjomi, Шиша бутилка  0,5 л",
+      "category": "SUV",
+      "price": 18,
+      "stock": 11,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 36,
+      "name": "Adrenaline Rush, Алюминий банка, 0,449 л",
+      "category": "SUV",
+      "price": 16,
+      "stock": 37,
+      "volume": 0.449,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 37,
+      "name": "Gorilla, Pomegranate Raspberry  алюминий банка 0.45 л",
+      "category": "SUV",
+      "price": 12,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 38,
+      "name": "Gorilla, Zero алюминий банка 0.45 л",
+      "category": "SUV",
+      "price": 12,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 39,
+      "name": "Flash Up Energy, MORNING CAKES алюминий банка 0.450 л",
+      "category": "SUV",
+      "price": 11,
+      "stock": 1,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 40,
+      "name": "Flash Up Energy женьшен экстракти билан алюминий банка 0,45 л",
+      "category": "SUV",
+      "price": 11,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 41,
+      "name": "Flash Up Energy, NIGHT MOVIE алюминий банка 0.450 л",
+      "category": "SUV",
+      "price": 11,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 42,
+      "name": "Flash Up Energy, BUBBLE GUM алюмин банка 0.45 л",
+      "category": "SUV",
+      "price": 11,
+      "stock": 3,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 43,
+      "name": "Flash Up Energy, MOJITO SRAWBERRY алюминий банка 0,45 л",
+      "category": "SUV",
+      "price": 11,
+      "stock": 9,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 44,
+      "name": "COCA-COLA, ПЭТ бутилка 2 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 30,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 45,
+      "name": "COCA-COLA, ширин, ПЭТ бутилка 1,5 л.",
+      "category": "SUV",
+      "price": 15,
+      "stock": 100,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 46,
+      "name": "Алкоголсиз ичимликлар (газланган ва газланмаган) COCA-COLA газланган ширин пэт бутилка 1 л.",
+      "category": "SUV",
+      "price": 11,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 47,
+      "name": "COCA-COLA, ширин, ПЭТ бутилка 1,0 л.",
+      "category": "SUV",
+      "price": 11,
+      "stock": 129,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 48,
+      "name": "COCA-COLA Schweppes Tonic алюминий банка 0,25 л",
+      "category": "SUV",
+      "price": 10,
+      "stock": 5,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 49,
+      "name": "COCA-COLA, Classic алюминий банка 0.45 л",
+      "category": "SUV",
+      "price": 10,
+      "stock": 15,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 50,
+      "name": "COCA-COLA, ширин, ПЭТ бутилка 0,5 л.",
+      "category": "SUV",
+      "price": 7,
+      "stock": 97,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 51,
+      "name": "Fanta Orange, ПЭТ бутилка 2 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 37,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 52,
+      "name": "FANTA, Apelsin Vitamin C пэт бутилка 2.5 л",
+      "category": "SUV",
+      "price": 19,
+      "stock": 6,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 53,
+      "name": "FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,5 л.",
+      "category": "SUV",
+      "price": 15,
+      "stock": 31,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 54,
+      "name": "FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 1,0 л.",
+      "category": "SUV",
+      "price": 11,
+      "stock": 29,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 55,
+      "name": "FANTA Anor алюминий банка 0,45 л",
+      "category": "SUV",
+      "price": 10,
+      "stock": 0,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 56,
+      "name": "FANTA, Fanta Orange Vitamin C ширин, ПЭТ бутилка 0,5 л.",
+      "category": "SUV",
+      "price": 7,
+      "stock": 18,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 57,
+      "name": "Omaf, газланмаган ПЭТ бутилка 1,5 л.",
+      "category": "SUV",
+      "price": 6,
+      "stock": 117,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 58,
+      "name": "Omaf, ПЭТ бутилка 1,0 л.",
+      "category": "SUV",
+      "price": 5,
+      "stock": 71,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 59,
+      "name": "Omaf, газланмаган ПЭТ бутилка 1,0 л.",
+      "category": "SUV",
+      "price": 5,
+      "stock": 158,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 60,
+      "name": "Omaf, (газ) 0,5 л",
+      "category": "SUV",
+      "price": 3,
+      "stock": 143,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 61,
+      "name": "Omaf, газланмаган ПЭТ бутилка 0,5 л.",
+      "category": "SUV",
+      "price": 3,
+      "stock": 176,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 62,
+      "name": "Omaf, газланмаган ПЭТ бутилка 0,35 л.",
+      "category": "SUV",
+      "price": 3,
+      "stock": 177,
+      "volume": 0.35,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 63,
+      "name": "Hydrolife, пэт бутилка 10 л",
+      "category": "SUV",
+      "price": 12,
+      "stock": 40,
+      "volume": 10,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 64,
+      "name": "Hydrolife пэт бутилка 5,0 л",
+      "category": "SUV",
+      "price": 8,
+      "stock": 9,
+      "volume": 5,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 65,
+      "name": "Hydrolife пэт бутилка (Газ) 1,5 л",
+      "category": "SUV",
+      "price": 5,
+      "stock": 54,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 66,
+      "name": "Hydrolife пэт бутилка (Без газа)1,5 л",
+      "category": "SUV",
+      "price": 5,
+      "stock": 109,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 67,
+      "name": "Hydrolife пэт бутилка (Газ) 1,0 л",
+      "category": "SUV",
+      "price": 4,
+      "stock": 53,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 68,
+      "name": "Hydrolife пэт бутилка (Без газа) 1,0 л",
+      "category": "SUV",
+      "price": 4,
+      "stock": 134,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 69,
+      "name": "Hydrolife пэт бутилка (Без газа) 0,5 л",
+      "category": "SUV",
+      "price": 3,
+      "stock": 45,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 70,
+      "name": "Hydrolife пэт бутилка (Газ) 0,5 л",
+      "category": "SUV",
+      "price": 3,
+      "stock": 106,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 71,
+      "name": "ESSE, CHANGE",
+      "category": "SİQARET",
+      "price": 28,
+      "stock": 29,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 72,
+      "name": "ESSE, CHANGE UP",
+      "category": "SİQARET",
+      "price": 26,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 73,
+      "name": "Parlament, Parlament Ocean Cruise",
+      "category": "SİQARET",
+      "price": 26,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 74,
+      "name": "ESSE, CHANGE M",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 75,
+      "name": "ESSE, CHANGE S",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 76,
+      "name": "Фильтрли сигаретлар Parliament Manhattan Red",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 3,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 77,
+      "name": "ESSE, CHANGE UP",
+      "category": "SİQARET",
+      "price": 26,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 78,
+      "name": "Parlament, Parlament Ocean Cruise",
+      "category": "SİQARET",
+      "price": 26,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 79,
+      "name": "ESSE, SILVER GRIP STYLE",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 4,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 80,
+      "name": "Parliament, Super Slims",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 7,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 81,
+      "name": "Parliament, LINE 100 GREEN FUSE",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 8,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 82,
+      "name": "ESSE, CHANGE GRIP STYLE",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 9,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 83,
+      "name": "Parlament, Parlament Exotic Cruise",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 9,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 84,
+      "name": "Sobranie, Sobranie Black (тонкие)",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 12,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 85,
+      "name": "Parliament, Parliament Aqua Blue",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 17,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 86,
+      "name": "Ароқ (2) Ayyu lux қуввати 40% шиша бутилка 0,25 л",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 18,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 87,
+      "name": "Parliament, Reserve Fuse",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 20,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 88,
+      "name": "Parliament, Reserve",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 20,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 89,
+      "name": "Parliament, Parliament Silver Blue",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 32,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 90,
+      "name": "Parliament, LINE 100 WINTER FUSE",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 40,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 91,
+      "name": "Parlament, Reserve 100 Summer Fuse",
+      "category": "SİQARET",
+      "price": 25,
+      "stock": 40,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 92,
+      "name": "Фильтрли сигаретлар Kent НD Blue 8",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 93,
+      "name": "Фильтрли сигаретлар Kent Kent Nano 4",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 8,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 94,
+      "name": "Фильтрли сигаретлар Kent Kent Blue",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 9,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 95,
+      "name": "Фильтрли сигаретлар Kent Mix Nano",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 10,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 96,
+      "name": "Kent, Beat Blue",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 20,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 97,
+      "name": "Kent, Kent Mix",
+      "category": "SİQARET",
+      "price": 24,
+      "stock": 21,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 98,
+      "name": "Winston, FINELINE CASTER+",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 99,
+      "name": "ESSE, CHANGE DEEP BROWN",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 100,
+      "name": "Winston, Super Slims Caster+",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 101,
+      "name": "Фильтрли сигаретлар ESSE CHANGE COLD BLACK",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 102,
+      "name": "TEREA, SUMMER WAVE",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 103,
+      "name": "Ароқ (2) JIGAR қуввати 40% шиша бутилка 0,25 л",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 3,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 104,
+      "name": "Қиздириладиган тамаки таёқчалари (стиклар) TEREA PURPLE WAVE",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 3,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 105,
+      "name": "TEREA, YELLOW",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 4,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 106,
+      "name": "TEREA, AMBER",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 4,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 107,
+      "name": "Winston, XStyle Shiny Mix",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 7,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 108,
+      "name": "Winston, Winston XStyle Silver",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 19,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 109,
+      "name": "Kent, MCR BLUE 20 дона",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 60,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 110,
+      "name": "Winston, Winston Compact Caster",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 60,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 111,
+      "name": "Winston, Winston XStyle Blue",
+      "category": "SİQARET",
+      "price": 23,
+      "stock": 190,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 112,
+      "name": "Фильтрли сигаретлар Winston SUMMER MIX",
+      "category": "SİQARET",
+      "price": 22,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 113,
+      "name": "Dunhill_deluxe_click_сигарет",
+      "category": "SİQARET",
+      "price": 22,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 114,
+      "name": "Pall Mall, FLORIDA SUNRISE",
+      "category": "SİQARET",
+      "price": 22,
+      "stock": 31,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 115,
+      "name": "Pall Mall, 100s Blue",
+      "category": "SİQARET",
+      "price": 22,
+      "stock": 68,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 116,
+      "name": "Kent, Kent mode 6",
+      "category": "SİQARET",
+      "price": 21,
+      "stock": 25,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 117,
+      "name": "Pall Mall, Pall Mall Vegas Nights",
+      "category": "SİQARET",
+      "price": 21,
+      "stock": 183,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 118,
+      "name": "BOHEM, LIBRE RED",
+      "category": "SİQARET",
+      "price": 20,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 119,
+      "name": "SIMPLE, MYSTIC PURPLE",
+      "category": "SİQARET",
+      "price": 20,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 120,
+      "name": "Pall Mall, Alaska Nights",
+      "category": "SİQARET",
+      "price": 20,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 121,
+      "name": "Фильтрли сигаретлар PINE BLUE",
+      "category": "SİQARET",
+      "price": 20,
+      "stock": 6,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 122,
+      "name": "Pall Mall, Pall Mall Dubai Nights",
+      "category": "SİQARET",
+      "price": 19,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 123,
+      "name": "Pall Mall, Pall Mall Nanokings Blue",
+      "category": "SİQARET",
+      "price": 19,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 124,
+      "name": "Milano, NEW YORK",
+      "category": "SİQARET",
+      "price": 19,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 125,
+      "name": "Pall Mall, Classic Blue",
+      "category": "SİQARET",
+      "price": 19,
+      "stock": 17,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 126,
+      "name": "Насвай (2000)",
+      "category": "SİQARET",
+      "price": 2,
+      "stock": 7,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 127,
+      "name": "Вино (2) Jaume serra жилвали Cava Chardonnay Gran Reserva қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 471,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 128,
+      "name": "Вино (2) Cava Jaume Serra Brut Organic қуввати 11.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 235,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 129,
+      "name": "Вино (2) Jaume serra жилвали Cava Brut Nature Vintage қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 234,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 130,
+      "name": "Вино (2) Cava Jaume Serra Brut Nature қуввати 11.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 230,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 131,
+      "name": "Вино (2) Jaume serra жилоли оқ брют қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 230,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 132,
+      "name": "Вино (2) Jaume serra жилоли полуқуруқ оқ қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 230,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 133,
+      "name": "Вино (2) Mukuzani dry red wine қуввати 12% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 170,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 134,
+      "name": "Вино (2) Pata Negra DO Toro қуввати 14% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 160,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 135,
+      "name": "Вино CHARDONNAY оқ қуруқ Don Simon Nature қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 136,
+      "name": "Вино (2) Castillo San Simon Rose крепость 11,5% стеклянная бутылка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 137,
+      "name": "Вино (2) Castillo San Simon Chardonnay крепость 11,5% стеклянная бутылка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 138,
+      "name": "Вино (2) Castillo San Simon Sweet Red крепость 11% стеклянная бутылка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 139,
+      "name": "Вино (2) DON SIMON оқ қуруқ NATURE SAUVIGNON BLANC қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 140,
+      "name": "Вино (2) DON SIMON қуруқ пушти Nature Rose қуввати 11,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 141,
+      "name": "Вино (2) DON SIMON қизил қуруқ Nature Merlot қуввати 12,5% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 148,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 142,
+      "name": "Вино (2) Senorio De Los Llanos Blanco Roble Airen қуввати 12% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 140,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 143,
+      "name": "Вино (2) Senorio De Los Llanos Crianza Tempranillo қуввати 12.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 140,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 144,
+      "name": "Вино (2) Senorio De Los Llanos Tempranillo Valdepenas қуввати 12.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 134,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 145,
+      "name": "Вино (2) Castillo Lagomar white dry қуввати 11% шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 133,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 146,
+      "name": "Вино (2) Baron Simon red dry қуввати 11% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 132,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 147,
+      "name": "Вино (2) Baron Simon Semi-Sweet қуввати 10,5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 132,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 148,
+      "name": "Вино (2) Baron Simon Blanco қуввати 11% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 132,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 149,
+      "name": "Вино (2) Baron Simon Semi-sweet оқ ярим ширин қуввати 10,5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 132,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 150,
+      "name": "Вино (2) TAMI пушти қуввати 11% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 123,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 151,
+      "name": "Вино (2) TAMI оқ қуввати 11% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 122,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 152,
+      "name": "Белое Золото, маҳсус қуввати 40%, шиша бутилка 1,0 л",
+      "category": "VİNO",
+      "price": 120,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 153,
+      "name": "Вино (2) BETON BRUT Prosecco оқ қуввати 11.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 117,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 154,
+      "name": "Вино (2) BETON BRUT Brut оқ қуввати 11.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 117,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 155,
+      "name": "Вино (2) BETON BRUT Moscato оқ қуввати 11.5% шиша бутилка 0.75 л",
+      "category": "VİNO",
+      "price": 117,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 156,
+      "name": "Вино (2) TAMI оқ қуруқ қуввати 11%, шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 112,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 157,
+      "name": "Вино (2) TAMI қизил қуруқ қуввати 11%, шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 112,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 158,
+      "name": "Вино Wine Garden Қуввати 11%, Шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 72,
+      "stock": 10,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 159,
+      "name": "Абрау Дюрсо, яримширин оқ жилвали қуввати 11% шиша бутилка 0,2 л",
+      "category": "VİNO",
+      "price": 50,
+      "stock": 5,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 160,
+      "name": "Абрау Дюрсо, яримқуруқ пушти жилвали қуввати 11% шиша бутилка 0,2 л",
+      "category": "VİNO",
+      "price": 50,
+      "stock": 6,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 161,
+      "name": "АБРАУ ДЮРСО, Брют, Қуввати 12,5% Шиша бутилка 0,2 л",
+      "category": "VİNO",
+      "price": 50,
+      "stock": 8,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 162,
+      "name": "Вино Tovuz Қуввати 13%, Шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 40,
+      "stock": 2,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 163,
+      "name": "Вино Tovuz Қуввати 13%, Шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 40,
+      "stock": 2,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 164,
+      "name": "Вино Царский Кагор Қизил десерт, Қуввати 16%, Шиша бутилка 0,75 л",
+      "category": "VİNO",
+      "price": 35,
+      "stock": 11,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 165,
+      "name": "Порто-53, оқ узумли ўткир қуввати 16% шиша бутилка 0,5 л",
+      "category": "VİNO",
+      "price": 26,
+      "stock": 7,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 166,
+      "name": "Вино (2) КЛУБНИКА пушти қуввати 17%, шиша бутилка 0,45 л",
+      "category": "VİNO",
+      "price": 25,
+      "stock": 1,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 167,
+      "name": "Jack Daniel's, Қуввати 40%, Шиша бутилка 1 л",
+      "category": "VİSKİ",
+      "price": 675,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 168,
+      "name": "Jack Daniel's, Қуввати 35%, Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 550,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 169,
+      "name": "Grants, Қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 505,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 170,
+      "name": "Aperol, Қуввати 11%, Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 504,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 171,
+      "name": "Grants, Қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 504,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 172,
+      "name": "Виски Johnnie Walker Red Label Қуввати 40% Шиша бутилка 1,0 л",
+      "category": "VİSKİ",
+      "price": 494,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 173,
+      "name": "Ром Kingston 62 White 40% 1,0",
+      "category": "VİSKİ",
+      "price": 455,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 174,
+      "name": "Ром Kingston62 Gold 40% 1,0",
+      "category": "VİSKİ",
+      "price": 406,
+      "stock": 1,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 175,
+      "name": "Fernet Branca, Қуввати 39%, Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 382,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 176,
+      "name": "Виски Johnnie Walker Red Label, Қуввати 40% Шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 358,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 177,
+      "name": "KINGSTON, 62 WHITE қуввати 40% шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 336,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 178,
+      "name": "KINGSTON, 62 GOLD қуввати 40% шиша бутилка 0,7 л",
+      "category": "VİSKİ",
+      "price": 330,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 179,
+      "name": "Galliano, Vanilla қуввати 30% шиша бутилка 0,5 л",
+      "category": "VİSKİ",
+      "price": 300,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 180,
+      "name": "Виски Johnnie Walker Red Label, Қуввати 40% Шиша бутилка 0,5 л",
+      "category": "VİSKİ",
+      "price": 278,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 181,
+      "name": "Bacardi, Қуввати 40%, Шиша бутилка 0,5 л",
+      "category": "VİSKİ",
+      "price": 218,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 182,
+      "name": "Bacardi, Қуввати 40%, Шиша бутилка 0,5 л",
+      "category": "VİSKİ",
+      "price": 215,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 183,
+      "name": "Ароқ (2) Mont Blanc қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 979000,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 184,
+      "name": "Ароқ (2) Mont Blanc Diamond қуввати 40% шиша бутилка 0,75 л",
+      "category": "VODKA",
+      "price": 943800,
+      "stock": 2,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 185,
+      "name": "Ароқ (2) CRYSTAL BARN қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 838200,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 186,
+      "name": "Ароқ (2) Mont Blanc қуввати 40% шиша бутилка 0,75 л",
+      "category": "VODKA",
+      "price": 770000,
+      "stock": 2,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 187,
+      "name": "Royal Elite Supreme, Vodka Gold Edition қуввати 40%, шиша бутилка 0,75 л",
+      "category": "VODKA",
+      "price": 701800,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 188,
+      "name": "Ароқ (2) Mont Blanc қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 489500,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 189,
+      "name": "Stolichnaya, Қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 338800,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 190,
+      "name": "Stolichnaya, Қуввати 40%, Шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 321200,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 191,
+      "name": "Premium Uzbekistan, қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 290400,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 192,
+      "name": "Аччиқ дамлама ЗОЛОТАЯ МОНЕТА қуввати 35% шиша бутилка 3 л",
+      "category": "VODKA",
+      "price": 253000,
+      "stock": 2,
+      "volume": 3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 193,
+      "name": "АМБАРНАЯ, SKY қуввати 37.5% шиша бутилка 1.5 л",
+      "category": "VODKA",
+      "price": 209000,
+      "stock": 1,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 194,
+      "name": "MACWEEN, қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 207900,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 195,
+      "name": "The Sevruga, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 192500,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 196,
+      "name": "АМБАРНАЯ, қуввати 40% шиша бутилка 1,5 л",
+      "category": "VODKA",
+      "price": 184800,
+      "stock": 2,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 197,
+      "name": "Stolichnaya, Қуввати 40%, Шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 183700,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 198,
+      "name": "Ароқ (2) UZBEGIM PREMIUM қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 181500,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 199,
+      "name": "АМБАРНАЯ, SAPPHIRE қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 178200,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 200,
+      "name": "Humo, Elite қуввати 40%, шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 176000,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 201,
+      "name": "ZING, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 160600,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 202,
+      "name": "TOP MOUNT, Crystal Peak қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 159500,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 203,
+      "name": "Ароқ (2) АМБАРНАЯ CRAFT қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 154000,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 204,
+      "name": "Ок олтин, қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 150700,
+      "stock": 4,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 205,
+      "name": "Талка, қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 148500,
+      "stock": 3,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 206,
+      "name": "АМБАРНАЯ, SKY қуввати 37.5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 143000,
+      "stock": 4,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 207,
+      "name": "Каратау, қуввати 40%, шиша бутилка 1,0 л",
+      "category": "VODKA",
+      "price": 143000,
+      "stock": 7,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 208,
+      "name": "Зеленая Марка, анъанавий қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 139700,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 209,
+      "name": "Ароқ (2) UZBEGIM PREMIUM қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 137500,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 210,
+      "name": "АМБАРНАЯ, SAPPHIRE қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 126500,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 211,
+      "name": "Ок олтин, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 123200,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 212,
+      "name": "Ароқ Alfa One қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 118800,
+      "stock": 3,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 213,
+      "name": "NEW UZBEKISTAN, PREMIUM қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 117700,
+      "stock": 12,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 214,
+      "name": "Ароқ (2) Golden River Classic қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 115500,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 215,
+      "name": "Ароқ (2) QARATAW Каратау 2 (сувенирлик безатилган) қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 110000,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 216,
+      "name": "Талка, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 108900,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 217,
+      "name": "Fortuna, қуввати 40%, шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 104500,
+      "stock": 5,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 218,
+      "name": "E factor, Gold 40% 0.7 л",
+      "category": "VODKA",
+      "price": 103400,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 219,
+      "name": "BAIKAL, Қуввати 40% Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 102300,
+      "stock": 5,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 220,
+      "name": "Ароқ (2) E factor Rising moon қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 101200,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 221,
+      "name": "DIKAYA UTKA, premium қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 101200,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 222,
+      "name": "Ароқ (2) TOSHKENT OQSHOMI Elite қуввати 37,5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 101200,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 223,
+      "name": "DIKAYA UTKA, platinum қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 97900,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 224,
+      "name": "Ароқ Зеленая Марка анъанавий қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 97900,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 225,
+      "name": "АМБАРНАЯ, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 96800,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 226,
+      "name": "Alfa One, қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 96800,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 227,
+      "name": "Ароқ Ок олтин қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 96800,
+      "stock": 9,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 228,
+      "name": "NEW UZBEKISTAN, PREMIUM қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 96800,
+      "stock": 14,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 229,
+      "name": "АМБАРНАЯ, SAPPHIRE қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 94600,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 230,
+      "name": "Ароқ Чёрное золото қуввати 40% банка 1 л",
+      "category": "VODKA",
+      "price": 93500,
+      "stock": 4,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 231,
+      "name": "Роса, Мягкая қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 92400,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 232,
+      "name": "Сваяк, Стандарт, қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 92400,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 233,
+      "name": "Каратау, қуввати 40%, шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 92400,
+      "stock": 9,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 234,
+      "name": "Ароқ (2) GOOD GOOSE қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 88000,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 235,
+      "name": "ULTRA, қуввати 40%, шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 88000,
+      "stock": 8,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 236,
+      "name": "Ароқ (2) Sirena Afsar қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 85800,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 237,
+      "name": "Ароқ Mastona Osiyo қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 85800,
+      "stock": 10,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 238,
+      "name": "Ароқ (2) Заповедник золотой тигр қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 84700,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 239,
+      "name": "Ароқ (2) Onix қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 84700,
+      "stock": 5,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 240,
+      "name": "АМБАРНАЯ, CRAFT қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 83600,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 241,
+      "name": "ЧЁТКАЯ, қуввати 38% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 83600,
+      "stock": 4,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 242,
+      "name": "Stekloff, қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 83600,
+      "stock": 8,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 243,
+      "name": "Белое Золото, маҳсус қуввати 40%, шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 82500,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 244,
+      "name": "TADBIR, қуввати 37.5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 81400,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 245,
+      "name": "E factor, Gold 40% 0.5 л",
+      "category": "VODKA",
+      "price": 81400,
+      "stock": 8,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 246,
+      "name": "Ароқ (2) Davr sharob СANNABER Organic қуввати 37,5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 80300,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 247,
+      "name": "Ароқ (2) E factor Rising moon қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 80300,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 248,
+      "name": "Ароқ Fortuna қуввати 40%, шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 80300,
+      "stock": 9,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 249,
+      "name": "NORDICA, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 79200,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 250,
+      "name": "Ароқ BAIKAL қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 79200,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 251,
+      "name": "Yagona, Super Light қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 79200,
+      "stock": 12,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 252,
+      "name": "Ароқ (2) Qazaq қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 78100,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 253,
+      "name": "Ароқ (2) Ок байир қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 78100,
+      "stock": 6,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 254,
+      "name": "Senator, қуввати 40%, шиша бутилка 0,75 л",
+      "category": "VODKA",
+      "price": 77000,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 255,
+      "name": "Ароқ Elsun Our money қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 77000,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 256,
+      "name": "Ароқ (2) Ак кула қуввати 40%, шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 77000,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 257,
+      "name": "Archa, қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 77000,
+      "stock": 5,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 258,
+      "name": "Afsona, қуввати 35% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 75900,
+      "stock": 2,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 259,
+      "name": "Ароқ (2) Kristalnaya Bali қуввати 40% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 260,
+      "name": "Ароқ (2) King size маяк қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 261,
+      "name": "LEDOHOD, Polar Spirit қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 262,
+      "name": "Ароқ (2) АМБАРНАЯ SKY қуввати 37.5% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 263,
+      "name": "Чойхона, қуввати 37,5% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 3,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 264,
+      "name": "Ароқ (2) Vachach Afsar қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 74800,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 265,
+      "name": "Alfa One, қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 73700,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 266,
+      "name": "CAIMAN, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 72600,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 267,
+      "name": "Ароқ (2) Cибирский Корунд қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 268,
+      "name": "Ароқ (2) QARATAW КЛАССИК (сувенир декор) қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 269,
+      "name": "Ароқ Чёрное золото маҳсус қуввати 40%, металл банка 0,7 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 270,
+      "name": "Зеленая Марка, анъанавий қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 271,
+      "name": "Ароқ (2) Вороновская гвардия қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 8,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 272,
+      "name": "DIKAYA UTKA, PREMIUM қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 71500,
+      "stock": 9,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 273,
+      "name": "Аччиқ дамлама ЗОЛОТАЯ МОНЕТА қуввати 35% шиша бутилка 1 л",
+      "category": "VODKA",
+      "price": 70400,
+      "stock": 1,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 274,
+      "name": "LVOFF, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 70400,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 275,
+      "name": "DIKAYA UTKA, platinum қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 70400,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 276,
+      "name": "Ароқ Montana қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 69300,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 277,
+      "name": "SEVERKA, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 69300,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 278,
+      "name": "Туманы, Platinum, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 69300,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 279,
+      "name": "Ароқ (2) Fin Line Арктик, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 68200,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 280,
+      "name": "Ароқ (2) Мельница WHITE қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 68200,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 281,
+      "name": "АМБАРНАЯ, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 68200,
+      "stock": 12,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 282,
+      "name": "Ароқ (2) JIGAR қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 68200,
+      "stock": 13,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 283,
+      "name": "Ароқ (2) KRISTALNOE OZERO қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 67100,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 284,
+      "name": "Alaska Ice Land Classic, Alfa қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 67100,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 285,
+      "name": "Ароқ (2) Shabada aksu қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 67100,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 286,
+      "name": "Ароқ (2) Sirena Afsar қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 66000,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 287,
+      "name": "Ароқ (2) ЧЁТКАЯ қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 66000,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 288,
+      "name": "Ароқ (2) Лоза қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 66000,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 289,
+      "name": "Ароқ (2) Заповедник золотой тигр қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 64900,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 290,
+      "name": "Настоящая, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 291,
+      "name": "GOOD GOOSE, қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 292,
+      "name": "Ароқ (2) СЕКРЕТНЫЙ КУПАЖ қуввати 37.5% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 293,
+      "name": "Ароқ (2) ХОЛОДОК қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 294,
+      "name": "Александр, қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 295,
+      "name": "ДЛЯ ПАЦАНОВ, қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 63800,
+      "stock": 10,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 296,
+      "name": "Ароқ Mastona Chilim қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 62700,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 297,
+      "name": "Аччиқ дамлама Far-Vab KENT қуввати 34% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 62700,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 298,
+      "name": "Ароқ Versace қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 62700,
+      "stock": 9,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 299,
+      "name": "FAROVON, TRILLIANT қуввати 34,4% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 62700,
+      "stock": 10,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 300,
+      "name": "Ароқ Mastona Onix қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 62700,
+      "stock": 17,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 301,
+      "name": "Farovon, БОМБА СО2 газланган қуввати 34,4% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 61600,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 302,
+      "name": "Аччиқ дамлама FAROVON Зелёный чай қуввати 34,4% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 61600,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 303,
+      "name": "Ароқ (2) FINNORD қуввати 40% шиша бутилка 0,45 л",
+      "category": "VODKA",
+      "price": 61600,
+      "stock": 4,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 304,
+      "name": "Ароқ Mastona Osiyo қуввати 40% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 61600,
+      "stock": 8,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 305,
+      "name": "Ароқ (2) Davr sharob СANNABER Organic қуввати 37,5% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 60500,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 306,
+      "name": "Tanho, крепость 37,5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 60500,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 307,
+      "name": "Ароқ (2) Congress қуввати 40% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 60500,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 308,
+      "name": "Аччиқ дамлама FAROVON O'zbekona қуввати 34,4% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 60500,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 309,
+      "name": "ЧЁТКАЯ, қуввати 38% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 60500,
+      "stock": 9,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 310,
+      "name": "Ароқ (2) Golden River Classic қуввати 37,5% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 59400,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 311,
+      "name": "Ароқ (2) King size маяк қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 59400,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 312,
+      "name": "Fortuna, қуввати 40%, шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 59400,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 313,
+      "name": "Ароқ Чистая қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 58300,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 314,
+      "name": "Аччиқ дамлама FAROVON Сувенир №1 қуввати 34,4% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 58300,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 315,
+      "name": "Ideal, қуввати 37.5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 57200,
+      "stock": 11,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 316,
+      "name": "LEDOHOD, Polar Spirit қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 56100,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 317,
+      "name": "Ароқ Пуин қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 318,
+      "name": "Ароқ А Класс қуввати 40%, шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 319,
+      "name": "DIKAYA UTKA, premium қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 320,
+      "name": "Ароқ Elsun Our money қуввати 37,5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 321,
+      "name": "Ароқ Mastona Oq Qush қуввати 35% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 322,
+      "name": "ULTRA, қуввати 40%, шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 4,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 323,
+      "name": "DIKAYA UTKA, platinum қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 55000,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 324,
+      "name": "Ароқ FAROVON резервная қуввати 37.5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 53900,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 325,
+      "name": "Ароқ (2) ИМПЕРИЯ ВКУСА (перец) қуввати 37,5% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 52800,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 326,
+      "name": "Аччиқ дамлама Far-Vab Amudaryo қуввати 34% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 52800,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 327,
+      "name": "Чойхона, қуввати 37,5% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 52800,
+      "stock": 14,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 328,
+      "name": "Archa, қуввати 37,5% шиша бутилка 0,7л",
+      "category": "VODKA",
+      "price": 52800,
+      "stock": 16,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 329,
+      "name": "Ароқ Camel Қуввати 37,5%, Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 51700,
+      "stock": 6,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 330,
+      "name": "Mumtoz, Қуввати 40%, Шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 51700,
+      "stock": 9,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 331,
+      "name": "Ароқ (2) King size sword қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 332,
+      "name": "MUZA, Аччик дамлама, қуввати 35% шиша бутилка 0,7 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 333,
+      "name": "Аччиқ дамлама Far-Vab KENT қуввати 34% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 334,
+      "name": "Ароқ (2) ЧЁТКАЯ қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 335,
+      "name": "Ароқ Versace қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 336,
+      "name": "ДЛЯ ПАЦАНОВ, қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 6,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 337,
+      "name": "QARATAW, 5 (сувенирлик безатилган) қуввати 40% шиша бутилка 0.45 л",
+      "category": "VODKA",
+      "price": 50600,
+      "stock": 6,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 338,
+      "name": "Ароқ Mastona Chilim қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 49500,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 339,
+      "name": "Ароқ (2) ХОЛОДОК қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 49500,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 340,
+      "name": "Ароқ Александр қуввати 40, шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 49500,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 341,
+      "name": "Мельница, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 49500,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 342,
+      "name": "Ароқ Mastona Onix қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 49500,
+      "stock": 6,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 343,
+      "name": "SEVERKA, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 344,
+      "name": "Argo, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 345,
+      "name": "Ароқ Mastona Osiyo қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 346,
+      "name": "GOOD GOOSE, қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 347,
+      "name": "Ароқ (2) Лоза қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 8,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 348,
+      "name": "Аччиқ дамлама Muza Сувенир1 қуввати 35% шиша бутилка 0.7 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 11,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 349,
+      "name": "FAROVON, TRILLIANT қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 48400,
+      "stock": 11,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 350,
+      "name": "Парламент, қуввати 37,5% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 47300,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 351,
+      "name": "Аччиқ дамлама FAROVON Зелёный чай қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 47300,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 352,
+      "name": "КЎЗА, қуввати 40% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 47300,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 353,
+      "name": "Аччиқ дамлама FAROVON AПАЧИ қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 46200,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 354,
+      "name": "OXXO, қуввати 37.5% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 46200,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 355,
+      "name": "FAROVON, БОМБА СО2 газланган қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 46200,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 356,
+      "name": "ЧЁТКАЯ, қуввати 38% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 46200,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 357,
+      "name": "Ароқ (2) Тошкент қуввати 40% шиша бутилка 0,45 л",
+      "category": "VODKA",
+      "price": 46200,
+      "stock": 18,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 358,
+      "name": "Ароқ (2) Ideal қуввати 37.5% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 44000,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 359,
+      "name": "Tadbir, қуввати 37.5% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 44000,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 360,
+      "name": "Аччиқ дамлама FAROVON сувенир 1 (Монарх тожи) қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 44000,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 361,
+      "name": "Ароқ Зеленая Марка анъанавий қуввати 40% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 44000,
+      "stock": 17,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 362,
+      "name": "FAROVON, NZOR қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 42900,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 363,
+      "name": "Ароқ (2) OUR MONEY қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 41800,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 364,
+      "name": "Stekloff, қуввати 37,5% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 41800,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 365,
+      "name": "Ароқ Camel LIGHT, Қуввати 37,5%, Шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 40700,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 366,
+      "name": "Silver, қуввати 40%, шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 40700,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 367,
+      "name": "Ароқ Mastona Oq Qush қуввати 35% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 40700,
+      "stock": 3,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 368,
+      "name": "Аччиқ дамлама Muza қуввати 34,4% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 40700,
+      "stock": 11,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 369,
+      "name": "Mastona, Cocktaill қуввати 35% шиша бутилка 0.5 л",
+      "category": "VODKA",
+      "price": 39600,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 370,
+      "name": "Mumtoz, қуввати 40% шиша бутилка 0,5 л",
+      "category": "VODKA",
+      "price": 38500,
+      "stock": 8,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 371,
+      "name": "OUR MONEY, қуввати 37,5%, алюминий банка 0.45 л",
+      "category": "VODKA",
+      "price": 35200,
+      "stock": 6,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 372,
+      "name": "Ароқ (2) АМБАРНАЯ қуввати 40% шиша бутилка 0,2 л",
+      "category": "VODKA",
+      "price": 33000,
+      "stock": 6,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 373,
+      "name": "Magnat, қуввати 35%, шиша бутилка 0.45 л",
+      "category": "VODKA",
+      "price": 31900,
+      "stock": 12,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 374,
+      "name": "Аччиқ дамлама Far-Vab Добрая қуввати 34% шиша бутилка 0,45 л",
+      "category": "VODKA",
+      "price": 30800,
+      "stock": 7,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 375,
+      "name": "Аччиқ дамлама Far-Vab Добрая қуввати 34% шиша бутилка 0,45 л",
+      "category": "VODKA",
+      "price": 30800,
+      "stock": 7,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 376,
+      "name": "Ароқ Каратау қуввати 40%, шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 28600,
+      "stock": 12,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 377,
+      "name": "Мельница, қуввати 40% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 27500,
+      "stock": 3,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 378,
+      "name": "Ароқ (2) OUR MONEY қуввати 40% алюминий банка 0,25 л",
+      "category": "VODKA",
+      "price": 27500,
+      "stock": 27,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 379,
+      "name": "ЧЁТКАЯ, қуввати 38% алюминий банка 0.25 л",
+      "category": "VODKA",
+      "price": 26400,
+      "stock": 1,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 380,
+      "name": "Чёрное золото, қуввати 40% металл банка 0,25 л",
+      "category": "VODKA",
+      "price": 26400,
+      "stock": 5,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 381,
+      "name": "Ароқ (2) GOOD GOOSE қуввати 40% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 26400,
+      "stock": 10,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 382,
+      "name": "Ароқ (2) Onix қуввати 40% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 26400,
+      "stock": 14,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 383,
+      "name": "Ароқ (2) ЧЁТКАЯ қуввати 38% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 23100,
+      "stock": 27,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 384,
+      "name": "Ароқ Mumtoz қуввати 37,5% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 22000,
+      "stock": 3,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 385,
+      "name": "Чойхона, қуввати 37,5% шиша бутилка 0.25 л",
+      "category": "VODKA",
+      "price": 22000,
+      "stock": 7,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 386,
+      "name": "ULTRA, қуввати 40%, шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 22000,
+      "stock": 25,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 387,
+      "name": "Archa, қуввати 37,5% шиша бутилка 0.25 л",
+      "category": "VODKA",
+      "price": 22000,
+      "stock": 26,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 388,
+      "name": "Аччиқ дамлама FAROVON O'ZBEKONA  қуввати 34,40% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 22000,
+      "stock": 68,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 389,
+      "name": "Ароқ (2) POLUS blue 37,5% 0,2 л",
+      "category": "VODKA",
+      "price": 20900,
+      "stock": 3,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 390,
+      "name": "Muza, қуввати 35% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 20900,
+      "stock": 8,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 391,
+      "name": "PULYA, қуввати 35% шиша бутилка 0,25 л",
+      "category": "VODKA",
+      "price": 20900,
+      "stock": 14,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 392,
+      "name": "Коньяк GRANGE XO қуввати 40% шиша бутилка 0,7 л",
+      "category": "KONYAK",
+      "price": 1,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 393,
+      "name": "Коньяк GRANGE VSOP қуввати 40% шиша бутилка 0,7 л",
+      "category": "KONYAK",
+      "price": 1,
+      "stock": 2,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 394,
+      "name": "Коньяк Узбекистан Exclusive КС қуввати 40% шиша бутилка 0.7 л",
+      "category": "KONYAK",
+      "price": 401,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 395,
+      "name": "Коньяк WHITE CROWN 7-йиллик қуввати 40% шиша бутилка 0,7 л",
+      "category": "KONYAK",
+      "price": 198,
+      "stock": 1,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 396,
+      "name": "Коньяк Davr sharob Pavo беш йиллик қуввати 40% шиша бутилка 0,7 л",
+      "category": "KONYAK",
+      "price": 192,
+      "stock": 3,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 397,
+      "name": "Cocnac Exclusive",
+      "category": "KONYAK",
+      "price": 165,
+      "stock": 2,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 398,
+      "name": "Коньяк Davr sharob Pavo беш йиллик қуввати 40% шиша бутилка 0,5 л",
+      "category": "KONYAK",
+      "price": 143,
+      "stock": 5,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 399,
+      "name": "Коньяк Davr sharob Pavo уч йиллик қуввати 40% шиша бутилка 0,5 л",
+      "category": "KONYAK",
+      "price": 116,
+      "stock": 7,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 400,
+      "name": "Ликер Узбекистон Коньяк 3 юлдуз қуввати 40%, Шиша бутилка 0,5 л.",
+      "category": "KONYAK",
+      "price": 101,
+      "stock": 4,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 401,
+      "name": "Коньяк СТАРКА қуввати 40% шиша бутилка 0,5 л",
+      "category": "KONYAK",
+      "price": 88,
+      "stock": 8,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 402,
+      "name": "Коньяк Davr sharob Davr's reserve қуввати 40% шиша бутилка 0,45 л",
+      "category": "KONYAK",
+      "price": 71,
+      "stock": 5,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 403,
+      "name": "Самарканд, Қуввати 40%, Шиша бутилка 0,5 л",
+      "category": "KONYAK",
+      "price": 64,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 404,
+      "name": "GLORIA, қуввати 40% шиша бутилка 0,7 л",
+      "category": "KONYAK",
+      "price": 62,
+      "stock": 5,
+      "volume": 0.7,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 405,
+      "name": "O'zbekiston, Коньяк қуввати 40%, Шиша бутилка 0,25 л.",
+      "category": "KONYAK",
+      "price": 59,
+      "stock": 3,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 406,
+      "name": "Коньяк Davr sharob Pavo уч йиллик қуввати 40% шиша бутилка 0,2 л",
+      "category": "KONYAK",
+      "price": 58,
+      "stock": 4,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 407,
+      "name": "Александрия, Аччиқ дамлама қуввати 38%, шиша бутилка 0,5 л",
+      "category": "KONYAK",
+      "price": 44,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 408,
+      "name": "Коньяк СТАРКА қуввати 40% шиша бутилка 0,2 л",
+      "category": "KONYAK",
+      "price": 44,
+      "stock": 13,
+      "volume": 0.2,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 409,
+      "name": "Французский стандарт, Аччиқ дамлама қуввати 38%, шиша бутилка 0,45 л",
+      "category": "KONYAK",
+      "price": 41,
+      "stock": 5,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 410,
+      "name": "Чёрный аист, Аччиқ дамлама қуввати 38%, шиша бутилка 0,45 л",
+      "category": "KONYAK",
+      "price": 39,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 411,
+      "name": "Французский стандарт, қуввати 38% шиша бутилка 0.375 л",
+      "category": "KONYAK",
+      "price": 35,
+      "stock": 1,
+      "volume": 0.375,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 412,
+      "name": "Samar oq qand, қуввати 35% шиша бутилка 0.25 л",
+      "category": "KONYAK",
+      "price": 22,
+      "stock": 4,
+      "volume": 0.25,
+      "volume_bucket": "0.25 L",
+      "image": null
+    },
+    {
+      "id": 413,
+      "name": "Шампан Platino оқ Blanco Brut қуввати 10% шиша бутилка 0.75 л",
+      "category": "SHAMPAN",
+      "price": 137,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 414,
+      "name": "Шампан Platino ним қуруқ оқ Blanco қуввати 10% шиша бутилка 0.75 л",
+      "category": "SHAMPAN",
+      "price": 137,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 415,
+      "name": "VILLA KRIM, жилвали Brut вино коллекцияси қуввати 10,0-13,5% шиша бутилка 0,75 л",
+      "category": "SHAMPAN",
+      "price": 79,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 416,
+      "name": "Вино Wine Garden Қизил ярим ширин, Қуввати 12,5%, Шиша бутилка 0,75 л",
+      "category": "SHAMPAN",
+      "price": 69,
+      "stock": 4,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 417,
+      "name": "PELLEGRINI, BIANCO SEMI SWEET қуввати 12.5% шиша бутилка 0.75 л",
+      "category": "SHAMPAN",
+      "price": 56,
+      "stock": 2,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 418,
+      "name": "Узбекское шампанское, Қуввати 10,5-12,5%, Шиша бутилка 0,75 л",
+      "category": "SHAMPAN",
+      "price": 45,
+      "stock": 1,
+      "volume": 0.75,
+      "volume_bucket": "0.7 L",
+      "image": null
+    },
+    {
+      "id": 419,
+      "name": "Пиво OLMALIQ Оч рангли пастеризацияланган Оч рангли экстраактивлик 12%, ПЭТ бутилка 2,2 литр",
+      "category": "PIVO",
+      "price": 37,
+      "stock": 12,
+      "volume": 2.2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 420,
+      "name": "Пиво БОЧКА Крепкого. Оч рангли зичлиги 15%, ПЭТ бутилка 2,3 литр",
+      "category": "PIVO",
+      "price": 36,
+      "stock": 7,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 421,
+      "name": "Пиво БАРЛОС Қуввати 11%, ПЭТ бутилка2,5 литр",
+      "category": "PIVO",
+      "price": 35,
+      "stock": 6,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 422,
+      "name": "PULSAR, Оч рангли зичлиги 12%, ПЭТ бутилка 2,3 литр",
+      "category": "PIVO",
+      "price": 35,
+      "stock": 7,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 423,
+      "name": "НОКДАУН, ПЭТ бутилка2,5 литр",
+      "category": "PIVO",
+      "price": 35,
+      "stock": 8,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 424,
+      "name": "Пиво ЮНУСАБАД ПЭТ бутилка2,5 литр",
+      "category": "PIVO",
+      "price": 35,
+      "stock": 28,
+      "volume": 2.5,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 425,
+      "name": "Пиво PULSAR Оч рангли зичлиги 10%, ПЭТ бутилка 2,3 литр",
+      "category": "PIVO",
+      "price": 34,
+      "stock": 1,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 426,
+      "name": "БОЧКА, Свежего. Оч рангли зичлиги 10%, ПЭТ бутилка 2,3 литр",
+      "category": "PIVO",
+      "price": 34,
+      "stock": 5,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 427,
+      "name": "PULSAR, Lite қуввати 3.6% пэт бутилка 2,3 л",
+      "category": "PIVO",
+      "price": 34,
+      "stock": 7,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 428,
+      "name": "ЖИГУЛЕВСКОЕ, Оч рангли зичлиги 11%, ПЭТ бутилка 2,3 литр (PULSAR GROUP BREWERY)",
+      "category": "PIVO",
+      "price": 34,
+      "stock": 25,
+      "volume": 2.3,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 429,
+      "name": "НЕМЕЦКОЕ, оч рангли фильтрланган \"Немецкое Традиционное\" қуввати 4% ПЭТ бутилка 2 л",
+      "category": "PIVO",
+      "price": 32,
+      "stock": 2,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 430,
+      "name": "ЖИГУЛЁВСКОЕ, оч рангли фильтрланган \"Жигулёвское классическое\" қуввати 4% ПЭТ бутилка 2 л",
+      "category": "PIVO",
+      "price": 32,
+      "stock": 4,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 431,
+      "name": "Пиво ЖИГУЛЁВСКОЕ классик оч рангда филтрланган қуввати 4,0% пэт бутилка 2 л",
+      "category": "PIVO",
+      "price": 32,
+      "stock": 7,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 432,
+      "name": "CRAFT LAGER, оч рангли қуввати 4% пэт бутилка 2 л",
+      "category": "PIVO",
+      "price": 32,
+      "stock": 12,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 433,
+      "name": "BRAUFEST, Оч рангли фильтрланган Қуввати 4%, ПЭТ бутилка 2 л",
+      "category": "PIVO",
+      "price": 32,
+      "stock": 12,
+      "volume": 2,
+      "volume_bucket": "3 L",
+      "image": null
+    },
+    {
+      "id": 434,
+      "name": "BUCHINGER, қуввати 4% пэт бутилка 1.5 л",
+      "category": "PIVO",
+      "price": 28,
+      "stock": 22,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 435,
+      "name": "Пиво Kronenburg 1664 Blanc қуввати 4.3% алюминий банка 0.43 л",
+      "category": "PIVO",
+      "price": 25,
+      "stock": 1,
+      "volume": 0.43,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 436,
+      "name": "Kronenburg 1664, Blanc қуввати 4,3% шиша бутилка 0,46 л",
+      "category": "PIVO",
+      "price": 25,
+      "stock": 13,
+      "volume": 0.46,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 437,
+      "name": "SARBAST, Special алкоголли 5,0%, ПЭТ бутилка 1,5 литр",
+      "category": "PIVO",
+      "price": 25,
+      "stock": 23,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 438,
+      "name": "SARBAST, Original алкоголли 4,2%, ПЭТ бутилка 1,5 литр",
+      "category": "PIVO",
+      "price": 25,
+      "stock": 25,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 439,
+      "name": "SARBAST, Lite алкогольное 3,2%, ПЭТ бутылка 1,5 литр",
+      "category": "PIVO",
+      "price": 25,
+      "stock": 43,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 440,
+      "name": "Пиво PULSAR БОЧКА қуввати 6,5% пэт бутилка 1.5 л",
+      "category": "PIVO",
+      "price": 24,
+      "stock": 5,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 441,
+      "name": "Пиво PULSAR Оч рангли зичлиги 10%, ПЭТ бутилка 1,5 литр",
+      "category": "PIVO",
+      "price": 23,
+      "stock": 4,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 442,
+      "name": "Пиво PULSAR Оч рангли зичлиги 12%, ПЭТ бутилка 1,5 литр",
+      "category": "PIVO",
+      "price": 23,
+      "stock": 5,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 443,
+      "name": "Пиво PULSAR қуввати 3.6% пжт бутилка 1,5 л",
+      "category": "PIVO",
+      "price": 23,
+      "stock": 6,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 444,
+      "name": "Пиво ЖИГУЛЕВСКОЕ Оч рангли зичлиги 11%, ПЭТ бутилка 1,5 литр",
+      "category": "PIVO",
+      "price": 23,
+      "stock": 11,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 445,
+      "name": "Разлив Sarbast original (20.000)",
+      "category": "PIVO",
+      "price": 23,
+      "stock": 33,
+      "volume": null,
+      "volume_bucket": "Boshqa / Другое",
+      "image": null
+    },
+    {
+      "id": 446,
+      "name": "ЖИГУЛЕВСКОЕ, оч рангли пастеризацияланган қуввати 4,2% пэт бутилка 1,5 л",
+      "category": "PIVO",
+      "price": 22,
+      "stock": 1,
+      "volume": 1.5,
+      "volume_bucket": "1.5 L",
+      "image": null
+    },
+    {
+      "id": 447,
+      "name": "Пиво OLMALIQ Оч рангли пастеризация қилинган қуввати 12%, ПЭТ бутилка 1 литр",
+      "category": "PIVO",
+      "price": 19,
+      "stock": 25,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 448,
+      "name": "QIBRAY, Iftihor Оч рангли қуввати 11%, Алюминий банка 0,9 л.",
+      "category": "PIVO",
+      "price": 18,
+      "stock": 22,
+      "volume": 0.9,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 449,
+      "name": "Пиво Платина Латина қуввати 4.7% шиша бутилка 0,4 л",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 2,
+      "volume": 0.4,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 450,
+      "name": "TUBORG, Алкоголли 4,5%, Шиша бутилка  0,5 литр",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 2,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 451,
+      "name": "Пиво HUNTER Extra beer, Қуввати 4%, Шиша бутилка 0,33 л",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 4,
+      "volume": 0.33,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 452,
+      "name": "TUBORG, Оч рангли алкоголли 4,5%, Темир банка 0,45 литр",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 29,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 453,
+      "name": "Пиво TUBORG LITE қуввати 3,2% шиша бутилка 0,5 л",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 35,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 454,
+      "name": "Пиво TUBORG LITE қуввати 3,2% алюминий банка 0,45 л",
+      "category": "PIVO",
+      "price": 17,
+      "stock": 53,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 455,
+      "name": "БАЛТИКА, экспорт қуввати 5,4% шиша бутилка 0.5 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 1,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 456,
+      "name": "БАЛТИКА, классик қуввати 4.8% алюминий банка 0.45 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 8,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 457,
+      "name": "ZATECKY GUS, қуввати 4,4% алюминий банка 0,45 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 8,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 458,
+      "name": "ZATECKY GUS, NEFILTROVANY қуввати 4,4% алюминий банка 0,45 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 13,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 459,
+      "name": "ZATECKY GUS, EXPORTNIY қуввати 5,4% шиша бутилка 0,47 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 15,
+      "volume": 0.47,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 460,
+      "name": "ZATECKY GUS, KREPKIY қуввати 8,0% алюминий банка 0,45 л",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 19,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 461,
+      "name": "БАЛТИКА, Балтика 7, Оч рангли алкогол 5,4%, Темир банка  0,45 литр",
+      "category": "PIVO",
+      "price": 16,
+      "stock": 28,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 462,
+      "name": "БАЛТИКА, Балтика 7, Оч рангли алкогол 5,4%, Шиша бутилка 0,47 литр",
+      "category": "PIVO",
+      "price": 15,
+      "stock": 1,
+      "volume": 0.47,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 463,
+      "name": "БАЛТИКА, Кулер Оч рангли қуввати 4.7% алюминий банка 0.45 л",
+      "category": "PIVO",
+      "price": 15,
+      "stock": 2,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 464,
+      "name": "Балтика, оч ранг алкоголсиз қуввати 0% шиша бутилка 0,5 л",
+      "category": "PIVO",
+      "price": 15,
+      "stock": 6,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 465,
+      "name": "КРУЖКА ПЕННОГО, ок пастеризацияланган зичлиги 10,5%, ПЭТ бутилка 1 литр",
+      "category": "PIVO",
+      "price": 15,
+      "stock": 69,
+      "volume": 1,
+      "volume_bucket": "1 L",
+      "image": null
+    },
+    {
+      "id": 466,
+      "name": "SARBAST, Original Unfiltered Оч рангли қуввати 4.7%, Темир банка  0,45 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 6,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 467,
+      "name": "SARBAST, Original Оч рангли қуввати 4,2%, Шиша бутилка  0,5 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 7,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 468,
+      "name": "Балтика, оч ранг алкоголсиз қуввати 0% темир банка 0,45 л",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 8,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 469,
+      "name": "Пиво Oltinchi GB қуввати 4,2% шиша бутилка 0,45 л",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 9,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 470,
+      "name": "ЖИГУЛЕВСКОЕ, специальное қуввати 4% алюминий банка 0.45 л",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 9,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 471,
+      "name": "SARBAST, Lite алкоголли 3,2%, Шиша бутилка  0,5 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 16,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 472,
+      "name": "SARBAST, Special алкоголли 5,0%, Шиша бутилка  0,5 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 24,
+      "volume": 0.5,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 473,
+      "name": "SARBAST, Original Оч рангли қуввати 4,2%, Темир банка  0,45 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 28,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 474,
+      "name": "SARBAST, Lite Оч рангли қуввати 3,4%, Темир банка  0,45 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 29,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 475,
+      "name": "SARBAST, Special Оч рангли қуввати 5,0%, Темир банка  0,45 литр",
+      "category": "PIVO",
+      "price": 14,
+      "stock": 48,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 476,
+      "name": "ZATECKY GUS, SVETLY қуввати 4.4%, шиша бутилка 0,47 л",
+      "category": "PIVO",
+      "price": 19,
+      "stock": 11,
+      "volume": 0.47,
+      "volume_bucket": "0.5 L",
+      "image": null
+    },
+    {
+      "id": 477,
+      "name": "CARLSBERG, қуввати 4.8% алюминий банка 0.45 л",
+      "category": "PIVO",
+      "price": 19,
+      "stock": 12,
+      "volume": 0.45,
+      "volume_bucket": "0.5 L",
+      "image": null
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "CHIPS",
+      "icon": "🍟"
+    },
+    {
+      "id": 2,
+      "name": "SUV",
+      "icon": "🥤"
+    },
+    {
+      "id": 3,
+      "name": "SİQARET",
+      "icon": "🚬"
+    },
+    {
+      "id": 4,
+      "name": "VİNO",
+      "icon": "🍷"
+    },
+    {
+      "id": 5,
+      "name": "VİSKİ",
+      "icon": "🥃"
+    },
+    {
+      "id": 6,
+      "name": "VODKA",
+      "icon": "🍸"
+    },
+    {
+      "id": 7,
+      "name": "KONYAK",
+      "icon": "🥂"
+    },
+    {
+      "id": 8,
+      "name": "SHAMPAN",
+      "icon": "🍾"
+    },
+    {
+      "id": 9,
+      "name": "PIVO",
+      "icon": "🍺"
+    }
+  ],
+  "exportDate": "2026-09-10T15:25:52.656Z"
+}
