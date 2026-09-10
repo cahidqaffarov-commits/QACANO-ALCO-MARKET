@@ -444,4 +444,404 @@ function renderProducts() {
   );
 
   if (filtered.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="text-center text-[#666] py-10">Mə
+    tbody.innerHTML = '<tr><td colspan="7" class="text-center text-[#666] py-10">Məhsul tapılmadı</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(p => {
+    const cat = categories.find(c => c.name === p.category) || { icon: '📦' };
+    const d = getDiscount(p.id);
+    const img = p.image
+      ? `<img src="${p.image}" class="w-12 h-12 rounded object-cover">`
+      : `<div class="w-12 h-12 rounded bg-[#1a1a1a] flex items-center justify-center text-2xl">${cat.icon}</div>`;
+    const stockBadge = p.stock === 0
+      ? '<span class="badge bg-red-500/20 text-red-400">Bitib</span>'
+      : p.stock <= 5
+        ? `<span class="badge bg-red-500/20 text-red-400">${p.stock} ədəd</span>`
+        : `<span class="badge bg-emerald-500/20 text-emerald-400">${p.stock} ədəd</span>`;
+    const priceHtml = d
+      ? `<div class="line-through text-[#666] text-xs">${formatPrice(p.price)}</div><div class="text-red-400 font-bold">${formatPrice(finalPrice(p))}</div>`
+      : `<div class="font-bold">${formatPrice(p.price)}</div>`;
+
+    return `<tr>
+      <td>${img}</td>
+      <td class="max-w-[300px]">${p.name}</td>
+      <td><span class="badge bg-[#1e1e1e] text-[#aaa]">${cat.icon} ${p.category}</span></td>
+      <td>${priceHtml}</td>
+      <td>${stockBadge}</td>
+      <td>${d ? `<span class="badge bg-red-500/20 text-red-400">-${d.percent}%</span>` : '<span class="text-[#444]">—</span>'}</td>
+      <td>
+        <button onclick="editProduct(${p.id})" class="px-3 py-1 rounded border border-[#333] hover:border-gold text-xs mr-1">✏️</button>
+        <button onclick="deleteProduct(${p.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+
+  // Cat filter
+  const cf = document.getElementById('catFilter');
+  if (cf) {
+    const cur = cf.value;
+    cf.innerHTML = '<option value="">Bütün kateqoriyalar</option>' +
+      categories.map(c => `<option value="${c.name}">${c.icon} ${c.name}</option>`).join('');
+    cf.value = cur;
+  }
+}
+
+function openProductModal() {
+  document.getElementById('productModalTitle').textContent = 'Yeni Məhsul';
+  document.getElementById('pId').value = '';
+  document.getElementById('pName').value = '';
+  document.getElementById('pPrice').value = '';
+  document.getElementById('pStock').value = '';
+  document.getElementById('pVolume').value = '';
+  document.getElementById('imagePreview').classList.add('hidden');
+  document.getElementById('uploadPlaceholder').classList.remove('hidden');
+  document.getElementById('imagePreview').src = '';
+
+  const sel = document.getElementById('pCategory');
+  sel.innerHTML = categories.map(c => `<option value="${c.name}">${c.icon} ${c.name}</option>`).join('');
+
+  openModal('productModal');
+}
+
+function editProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('productModalTitle').textContent = 'Məhsulu Redaktə Et';
+  document.getElementById('pId').value = p.id;
+  document.getElementById('pName').value = p.name;
+  document.getElementById('pPrice').value = p.price;
+  document.getElementById('pStock').value = p.stock;
+  document.getElementById('pVolume').value = p.volume || '';
+
+  const sel = document.getElementById('pCategory');
+  sel.innerHTML = categories.map(c => `<option value="${c.name}">${c.icon} ${c.name}</option>`).join('');
+  sel.value = p.category;
+
+  if (p.image) {
+    document.getElementById('imagePreview').src = p.image;
+    document.getElementById('imagePreview').classList.remove('hidden');
+    document.getElementById('uploadPlaceholder').classList.add('hidden');
+  } else {
+    document.getElementById('imagePreview').classList.add('hidden');
+    document.getElementById('uploadPlaceholder').classList.remove('hidden');
+  }
+  openModal('productModal');
+}
+
+function saveProduct() {
+  const id = document.getElementById('pId').value;
+  const name = document.getElementById('pName').value.trim();
+  const category = document.getElementById('pCategory').value;
+  const price = parseInt(document.getElementById('pPrice').value);
+  const stock = parseInt(document.getElementById('pStock').value);
+  const volume = parseFloat(document.getElementById('pVolume').value) || null;
+  const image = document.getElementById('imagePreview').src || null;
+
+  if (!name || !price || isNaN(stock)) {
+    showToast('Ad, qiymət və stok mütləqdir!', 'error'); return;
+  }
+
+  if (id) {
+    const p = products.find(x => x.id === parseInt(id));
+    if (p) Object.assign(p, { name, category, price, stock, volume, image });
+    showToast('Məhsul yeniləndi ✅');
+  } else {
+    products.push({ id: nextId++, name, category, price, stock, volume, image });
+    showToast('Məhsul əlavə edildi ✅');
+  }
+  save(); renderProducts(); renderDashboard();
+  closeModal('productModal');
+}
+
+function deleteProduct(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  products = products.filter(p => p.id !== id);
+  save(); renderProducts(); renderDashboard();
+  showToast('Məhsul silindi 🗑️');
+}
+
+// Image upload
+document.addEventListener('DOMContentLoaded', () => {
+  const imgInput = document.getElementById('pImage');
+  if (imgInput) {
+    imgInput.addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        document.getElementById('imagePreview').src = ev.target.result;
+        document.getElementById('imagePreview').classList.remove('hidden');
+        document.getElementById('uploadPlaceholder').classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+  renderDashboard();
+  renderProducts();
+  renderCategories();
+  renderStock();
+  renderDiscounts();
+  renderOrders();
+  renderUsers();
+});
+
+// ========== CATEGORIES ==========
+function renderCategories() {
+  const grid = document.getElementById('categoriesGrid');
+  if (!grid) return;
+  grid.innerHTML = categories.map(c => {
+    const count = products.filter(p => p.category === c.name).length;
+    return `<div class="card p-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="text-3xl">${c.icon}</div>
+        <div>
+          <div class="font-bold">${c.name}</div>
+          <div class="text-xs text-[#666]">${count} məhsul</div>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="editCategory(${c.id})" class="px-3 py-1 rounded border border-[#333] hover:border-gold text-xs">✏️</button>
+        <button onclick="deleteCategory(${c.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openCategoryModal() {
+  document.getElementById('categoryModalTitle').textContent = 'Yeni Kateqoriya';
+  document.getElementById('cId').value = '';
+  document.getElementById('cName').value = '';
+  document.getElementById('cIcon').value = '';
+  openModal('categoryModal');
+}
+function editCategory(id) {
+  const c = categories.find(x => x.id === id);
+  if (!c) return;
+  document.getElementById('categoryModalTitle').textContent = 'Kateqoriyanı Redaktə Et';
+  document.getElementById('cId').value = c.id;
+  document.getElementById('cName').value = c.name;
+  document.getElementById('cIcon').value = c.icon;
+  openModal('categoryModal');
+}
+function saveCategory() {
+  const id = document.getElementById('cId').value;
+  const name = document.getElementById('cName').value.trim().toUpperCase();
+  const icon = document.getElementById('cIcon').value.trim() || '📦';
+  if (!name) { showToast('Ad mütləqdir!', 'error'); return; }
+  if (id) {
+    const c = categories.find(x => x.id === parseInt(id));
+    if (c) { c.name = name; c.icon = icon; }
+    showToast('Kateqoriya yeniləndi ✅');
+  } else {
+    categories.push({ id: nextCatId++, name, icon });
+    showToast('Kateqoriya əlavə edildi ✅');
+  }
+  save(); renderCategories(); renderProducts(); renderDashboard();
+  closeModal('categoryModal');
+}
+function deleteCategory(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  categories = categories.filter(c => c.id !== id);
+  save(); renderCategories(); renderProducts();
+  showToast('Kateqoriya silindi 🗑️');
+}
+
+// ========== STOCK ==========
+function renderStock() {
+  const tbody = document.getElementById('stockTable');
+  if (!tbody) return;
+  document.getElementById('stockTotal').textContent = products.length;
+  document.getElementById('stockLow').textContent = products.filter(p => p.stock > 0 && p.stock <= 5).length;
+  document.getElementById('stockOut').textContent = products.filter(p => p.stock === 0).length;
+
+  tbody.innerHTML = products.sort((a, b) => a.stock - b.stock).map(p => {
+    const status = p.stock === 0
+      ? '<span class="badge bg-red-500/20 text-red-400">Bitib</span>'
+      : p.stock <= 5
+        ? '<span class="badge bg-red-500/20 text-red-400">Az qalıb</span>'
+        : '<span class="badge bg-emerald-500/20 text-emerald-400">Yaxşı</span>';
+    return `<tr>
+      <td>${p.name}</td>
+      <td class="font-bold">${p.stock}</td>
+      <td>${status}</td>
+      <td>${formatPrice(p.price)}</td>
+      <td class="gold">${formatPrice(p.price * p.stock)}</td>
+      <td>
+        <button onclick="adjustStock(${p.id}, 1)" class="px-2 py-1 rounded border border-[#333] hover:border-emerald-400 text-xs">+1</button>
+        <button onclick="adjustStock(${p.id}, -1)" class="px-2 py-1 rounded border border-[#333] hover:border-red-400 text-xs ml-1">-1</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+function adjustStock(id, delta) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  p.stock = Math.max(0, p.stock + delta);
+  save(); renderStock(); renderProducts(); renderDashboard();
+}
+
+// ========== DISCOUNTS ==========
+function renderDiscounts() {
+  const grid = document.getElementById('discountsGrid');
+  if (!grid) return;
+  if (discounts.length === 0) {
+    grid.innerHTML = '<div class="card p-10 text-center text-[#666] md:col-span-3">Hələ endirim yoxdur</div>';
+    return;
+  }
+  grid.innerHTML = discounts.map(d => {
+    const p = products.find(x => x.id === d.productId);
+    if (!p) return '';
+    const newPrice = Math.round(p.price * (1 - d.percent/100));
+    return `<div class="card p-5">
+      <div class="flex items-center justify-between mb-3">
+        <span class="badge bg-red-500/20 text-red-400">-${d.percent}%</span>
+        <button onclick="deleteDiscount(${d.id})" class="text-[#666] hover:text-red-400">🗑️</button>
+      </div>
+      <div class="font-bold mb-2">${p.name.substring(0, 40)}</div>
+      <div class="text-sm text-[#888] mb-1 line-through">${formatPrice(p.price)}</div>
+      <div class="text-2xl font-bold gold">${formatPrice(newPrice)}</div>
+    </div>`;
+  }).join('');
+}
+function openDiscountModal() {
+  const sel = document.getElementById('dProduct');
+  sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name}</option>`).join('');
+  document.getElementById('dPercent').value = '';
+  openModal('discountModal');
+}
+function saveDiscount() {
+  const productId = parseInt(document.getElementById('dProduct').value);
+  const percent = parseInt(document.getElementById('dPercent').value);
+  if (!percent || percent < 1 || percent > 90) { showToast('1-90 arası faiz daxil edin!', 'error'); return; }
+  discounts.push({ id: Date.now(), productId, percent, active: true });
+  save(); renderDiscounts(); renderProducts(); renderDashboard();
+  closeModal('discountModal');
+  showToast('Endirim tətbiq edildi ✅');
+}
+function deleteDiscount(id) {
+  discounts = discounts.filter(d => d.id !== id);
+  save(); renderDiscounts(); renderProducts();
+  showToast('Endirim silindi 🗑️');
+}
+
+// ========== ORDERS ==========
+function renderOrders() {
+  const tbody = document.getElementById('ordersTable');
+  if (!tbody) return;
+  tbody.innerHTML = orders.map(o => {
+    const statusColors = {
+      'Tamamlandı': 'bg-emerald-500/20 text-emerald-400',
+      'Gözləmədə': 'bg-yellow-500/20 text-yellow-400',
+      'Ləğv edildi': 'bg-red-500/20 text-red-400'
+    };
+    return `<tr>
+      <td class="font-mono">#${o.id}</td>
+      <td>${o.customer}</td>
+      <td>${o.phone}</td>
+      <td>${o.product}</td>
+      <td class="gold font-bold">${formatPrice(o.amount)}</td>
+      <td class="text-[#888]">${o.date}</td>
+      <td><span class="badge ${statusColors[o.status] || 'bg-[#1e1e1e]'}">${o.status}</span></td>
+      <td><button onclick="deleteOrder(${o.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button></td>
+    </tr>`;
+  }).join('');
+}
+function deleteOrder(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  orders = orders.filter(o => o.id !== id);
+  save(); renderOrders(); renderDashboard();
+}
+
+// ========== USERS ==========
+function renderUsers() {
+  const tbody = document.getElementById('usersTable');
+  if (!tbody) return;
+  tbody.innerHTML = users.map(u => `
+    <tr>
+      <td class="font-bold">${u.name}</td>
+      <td>${u.email}</td>
+      <td><span class="badge bg-[#d4af37]/20 gold">${u.role}</span></td>
+      <td>${u.active ? '<span class="badge bg-emerald-500/20 text-emerald-400">Aktiv</span>' : '<span class="badge bg-red-500/20 text-red-400">Deaktiv</span>'}</td>
+      <td class="text-[#888] text-xs">${u.lastLogin}</td>
+      <td><button onclick="deleteUser(${u.id})" class="px-3 py-1 rounded border border-[#333] hover:border-red-400 text-xs">🗑️</button></td>
+    </tr>
+  `).join('');
+}
+function openUserModal() {
+  document.getElementById('uName').value = '';
+  document.getElementById('uEmail').value = '';
+  openModal('userModal');
+}
+function saveUser() {
+  const name = document.getElementById('uName').value.trim();
+  const email = document.getElementById('uEmail').value.trim();
+  const role = document.getElementById('uRole').value;
+  if (!name || !email) { showToast('Ad və email mütləqdir!', 'error'); return; }
+  users.push({ id: Date.now(), name, email, role, active: true, lastLogin: new Date().toLocaleString('az-AZ') });
+  save(); renderUsers();
+  closeModal('userModal');
+  showToast('İstifadəçi əlavə edildi ✅');
+}
+function deleteUser(id) {
+  if (!confirm('Silmək istədiyinizə əminsiniz?')) return;
+  users = users.filter(u => u.id !== id);
+  save(); renderUsers();
+}
+
+// ========== IMPORT / EXPORT ==========
+function exportCSV() {
+  const headers = ['id','name','category','price','stock','volume'];
+  const rows = products.map(p => headers.map(h => `"${(p[h] ?? '').toString().replace(/"/g, '""')}"`).join(','));
+  const csv = '\uFEFF' + headers.join(',') + '\n' + rows.join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'qacano_products_' + Date.now() + '.csv';
+  a.click();
+  showToast('CSV yükləndi ✅');
+}
+function exportAll() {
+  const data = { products, categories, discounts, orders, users, exportDate: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'qacano_backup_' + Date.now() + '.json';
+  a.click();
+  showToast('Backup yükləndi ✅');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const csvInput = document.getElementById('csvInput');
+  if (csvInput) {
+    csvInput.addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        const lines = ev.target.result.split('\n').filter(l => l.trim());
+        let count = 0;
+        lines.slice(1).forEach(line => {
+          const parts = line.split(',').map(s => s.trim().replace(/^"|"$/g, ''));
+          if (parts.length >= 4) {
+            products.push({
+              id: nextId++,
+              name: parts[0], category: parts[1],
+              price: parseInt(parts[2]) || 0,
+              stock: parseInt(parts[3]) || 0,
+              volume: null, image: null
+            });
+            count++;
+          }
+        });
+        save(); renderProducts(); renderDashboard();
+        showToast(count + ' məhsul əlavə edildi ✅');
+      };
+      reader.readAsText(file);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
